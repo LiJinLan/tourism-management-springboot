@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.SearchDao">
+	<select id="searchHotel" parameterType="String" resultType="Map">
+		select * from hotel
+		where (name like #{newKeyWord} or city like #{newKeyWord} or province like #{newKeyWord} or address like #{newKeyWord})
+	</select>
+	<select id="searchLine" parameterType="String" resultType="Map">
+		select * from line
+		where (name like #{newKeyWord})
+	</select>
+	<select id="searchScenic" parameterType="String" resultType="Map">
+		select * from scenic
+		where (name like #{newKeyWord} or city like #{newKeyWord} or province like #{newKeyWord} or address like #{newKeyWord})
+	</select>
+</mapper>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.LineDao">
+	<insert id="addLine" parameterType="Map" >
+		insert into line (id, name, address, originalPrice, salePrice, tradeVolume, satisfaction, mealSign, lineNumber, gobackWay, aheadApply, payWay, lineFeature, costInclude, costUnInclude, ContractPay, remark, telephone, lineImage)
+		values (#{id}, #{name}, #{address}, #{originalPrice}, #{salePrice}, #{tradeVolume}, #{satisfaction}, #{mealSign}, #{lineNumber}, #{gobackWay}, #{aheadApply}, #{payWay}, #{lineFeature}, #{costInclude}, #{costUnInclude}, #{ContractPay}, #{remark}, #{telephone}, #{lineImage})
+	</insert>
+	
+	<insert id="addSchedule" parameterType="Map">
+		insert into line_schedule(id, lineId, day, name, meal, stay, trafic, detail)
+		values(#{id}, #{lineId}, #{day}, #{name}, #{meal}, #{stay}, #{trafic}, #{detail})
+	</insert>
+	
+	<select id="queryLineByName" parameterType="String" resultType="Map">
+		select id, name, address, originalPrice, salePrice, tradeVolume, satisfaction, mealSign, lineNumber, gobackWay, aheadApply, payWay, lineFeature, costInclude, costUnInclude, ContractPay, remark, telephone, lineImage
+		from line
+		where name =#{name}
+	</select>
+	
+	<select id="queryLineById" parameterType="String" resultType="Map">
+		select id, name, address, originalPrice, salePrice, tradeVolume, satisfaction, mealSign, lineNumber, gobackWay, aheadApply, payWay, lineFeature, costInclude, costUnInclude, ContractPay, remark, telephone, lineImage
+		from line
+		where id =#{id}
+	</select>
+	<select id="queryLineAll" resultType="Map">
+		select id, name, address, originalPrice, salePrice, tradeVolume, satisfaction, mealSign, lineNumber, gobackWay, aheadApply, payWay, lineFeature, costInclude, costUnInclude, ContractPay, remark, telephone, lineImage
+		from line order by id desc
+	</select>
+	<select id="queryLineScheduleByLineId" parameterType="String" resultType="Map">
+		select id, lineId, day, name, meal, stay, trafic, detail
+		from line_schedule
+		where lineId =#{lineId}
+	</select>
+	
+	<delete id="deleteLineById" parameterType="String">
+		delete from line where id =#{id}
+	</delete>
+	<update id="updateLine" parameterType="Map">
+		update line set name = #{name}, address = #{address}, originalPrice = #{originalPrice}, salePrice = #{salePrice}, tradeVolume = #{tradeVolume}, satisfaction = #{satisfaction}, mealSign = #{mealSign}, lineNumber = #{lineNumber}, gobackWay = #{gobackWay}, aheadApply = #{aheadApply}, payWay = #{payWay}, lineFeature = #{lineFeature}, costInclude = #{costInclude}, costUnInclude = #{costUnInclude}, ContractPay = #{ContractPay}, remark = #{remark}, telephone = #{telephone}, lineImage =#{lineImage} where id = #{id}
+	</update>
+	<update id="updateLineSchedule" parameterType="Map">
+		update line_schedule set day = #{day},name = #{name},meal = #{meal},stay = #{stay},trafic = #{trafic},detail = #{detail} where id = #{id}
+	</update>
+	<select id="queryLineRecommend" parameterType="Map" resultType="Map">
+		${EXE_SQL}
+	</select>
+	
+</mapper>

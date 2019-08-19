@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <meta charset="utf-8" /> 
+        <title>旅游景点-旅游1</title> 
+        <script>
+            window.SITEURL = "/";
+            window.CURRENCY_SYMBOL="￥";
+        </script> 
+        <link type="text/css" href="./css/header.css" rel="stylesheet" /> 
+        <link type="text/css" href="./css/footer.css" rel="stylesheet" /> 
+        <link type="text/css" href="./css/scenic.css" rel="stylesheet" /> 
+
+        <script type="text/javascript" src="./js/jqueryScenic.js"></script> 
+        <script type="text/javascript" src="./js/SuperSlide.min.js"></script> 
+        <script type="text/javascript" src="./js/scenic.js"></script> 
+        <script type="text/javascript" src="../../../../resources/js/util.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/user.js"></script>
+        <script type="text/javascript" src="../../index/page/js/search.js"></script>
+   </head> 
+    <body> 
+        <div class="web-top"> 
+            <div class="wm-1200"> 
+                <div class="notice-txt">
+                    <p><span style="color: #808080">旅游管理系统网站：订购电话：7006-0999-27</span></p>
+                </div> 
+                <div class="scroll-order"> 
+                    <ul> 
+                        <li>13551***1小时前评论了<a href="javaScript:;" target="_blank">九寨沟犀牛海</a></li>
+                        <li>13545***2小时前评论了<a href="javaScript:;" target="_blank">九寨沟星宇国际大酒店</a></li>
+                        <li>18682***33分钟前评论了<a href="javaScript:;" target="_blank">峨眉山乐山二日游</a></li>
+                    </ul> 
+                </div> 
+                <div class="top-login"> 
+                    <span id="loginstatus"> </span> 
+                    <a class="dd" href="/search/order"><i></i>订单查询</a> 
+                    <dl class="dh"> 
+                        <dt>
+                            <i></i>网站导航
+                        </dt> 
+                        <dd> 
+                            <a href="../../lines/page/index.html">线路</a> 
+                           <a href="../../hotels/page/index.html">酒店</a> 
+                           <a href="../../scenic/page/index.html">景点</a> 
+                        </dd> 
+                    </dl> 
+                </div> 
+            </div> 
+        </div><!--顶部--> 
+        <div class="st-header"> 
+            <div class="wm-1200"> 
+                <div class="st-logo"> 
+                    <a href="/"></a> 
+                </div> 
+                <div class="st-top-search">
+                    <div class="st-search-down">
+                        <strong id="typename"><i></i></strong>
+                        <ul class="st-down-select searchmodel">
+                            <li data-id="0" data-url="all">全部</li>
+                            <li data-id="1" data-url="line">线路</li>
+                            <li data-id="2" data-url="hotel">酒店</li>
+                            <li data-id="5" data-url="scenic">景点</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="st-txt searchkeyword" placeholder="输入目的地、名称、省份、城市" />
+                    <span>
+                                                 
+                    </span>
+                    <input type="button" onclick="searchKey();" value="搜索" class="st-btn" />
+                </div>
+                <div class="st-link-way"> 
+                    <strong>客服电话：</strong> 
+                    <em>18757999962</em> 
+                </div> 
+            </div> 
+        </div><!--header--> 
+        <div class="st-nav"> 
+            <div class="wm-1200"> 
+                <div class="st-global"> 
+                    <div class="global-bt">旅游导航</div> 
+                   <!--  <div class="global-list" style="display: none;"> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">云南旅游</a>
+                                </strong> 
+                                <p> 
+                                    <a href="" target="_blank">001</a> 
+                                </p><i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                    <dl> 
+                                        <dt>
+                                            <a href="" target="_blank">001</a>
+                                        </dt> 
+                                        <dd> 
+                                            <a href="">0012</a> 
+                                        </dd> 
+                                    </dl> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">广东旅游</a>
+                                </strong> 
+                                <p> 
+                                </p> 
+                                <i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">自定义</a>
+                                </strong> 
+                                <p> 
+                                </p> 
+                                <i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>  -->
+                </div> 
+                <script>
+                    $(function(){
+                        $('.gl-list-tabbox,.st-dh-con').hover(function(){
+                            $(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+                            $(this).children('h3').find('.arrow-rig').hide();
+                        },function(){
+                            $(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+                            $(this).children('h3').find('.arrow-rig').show();
+                        })
+                        $('.global-list').hide();
+                        $('.st-global').hoverDelay(function(){
+                            $('.global-list').show();
+                        },function(){
+                            $('.global-list').hide();
+                        })
+                    })
+                </script> 
+                <div class="st-menu"> 
+                    <a href="../../index/page/index.html">首页<s></s></a> 
+                    <a href="../../lines/page/index.html">线路 <i class="st-new-ico"></i><s></s> </a> 
+                    <a href="../../hotels/page/index.html">酒店 </a> 
+                    <a href="../../scenic/page/index.html">景点 <i class="st-hot-ico"></i><s></s> </a> 
+                </div> 
+            </div> 
+        </div><!--主导航--> 
+        <script>
+            var SITEURL = "/";
+            $(function(){
+                $(".searchmodel li").click(function(){
+                    var typeid = $(this).attr('data-id');
+                    var durl = $(this).attr('data-url');
+                    var typename = $(this).text();
+                    $("#typename").html(typename+'<i></i>');
+                    $("#typename").attr('data-id',typeid);
+                    $("#typename").attr('data-url',durl);
+                })
+                $(".searchmodel li:first").trigger('click');
+                //search
+                $('.st-btn').click(function(){
+                    return true;
+                })
+                //导航的选中状态
+                $(".st-menu a").each(function(){
+                    var url= window.location.href;
+                    url=url.replace('index.php','');
+                    url=url.replace('index.html','');
+                    var ulink=$(this).attr("href");
+                    if(url==ulink)
+                    {
+                        $(this).addClass('active');
+                    }
+                })
+            })
+        </script> 
+        <div class="big"> 
+            <div class="wm-1200"> 
+                <div class="st-guide"> 
+                    <a href="/">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;景点 
+                </div><!--面包屑--> 
+                <div class="st-scenic-home-top"> 
+                    <div id="st-scenic-slideBox" class="st-scenic-slideBox"> 
+                        <div class="hd"> 
+                            <ul> 
+                                <li>$k</li> 
+                            </ul> 
+                        </div> 
+                        <div class="bd"> 
+                            <ul> 
+                                <li>
+                                    <a href="" target="_blank">
+                                        <img src="../res/images/scenic.jpg" width="815" height="320" />
+                                    </a>
+                                </li> 
+                            </ul> 
+                        </div><!--前/后按钮代码--> 
+                        <a class="prev" href="javascript:void(0)"></a> 
+                        <a class="next" href="javascript:void(0)"></a> 
+                    </div><!--景点门票首页焦点图--> 
+                </div> 
+                <div class="st-cp-slideTab"> 
+                    <div class="st-tabnav"> 
+                        <h3>国内游</h3> 
+                        <span data-id="36" class="on" data-url="/spots/guoneiyou/">热门<i></i></span> 
+                        <a href="/spots/guoneiyou/" class="more">更多景点</a> 
+                    </div> 
+                    <div id="inland" class="st-tabcon"> 
+                        <ul> 
+                        </ul> 
+                    </div> 
+                </div> 
+                <div class="st-cp-slideTab"> 
+                    <div class="st-tabnav"> 
+                        <h3>出境游</h3> 
+                        <span data-id="37" class="on" data-url="/spots/chujingyou/">热门<i></i></span> 
+                        <a href="/spots/chujingyou/" class="more">更多景点</a> 
+                    </div> 
+                    <div class="st-tabcon"> 
+                        <ul> 
+                        </ul> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+
+        <div class="st-brand">
+            <div class="wm-1200">
+                <div class="st-serve">
+                    <dl class="ico01 bor_0">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光价格</em>
+                            <span>同类产品，保证低价</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico02">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光行程</em>
+                            <span>品质护航，透明公开</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico03">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光服务</em>
+                            <span>专属客服，快速响应</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico04">
+                        <dt></dt>
+                        <dd>
+                            <em>救援保障</em>
+                            <span>途中意外，保证援助</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--品牌介绍-->
+        <div class="st-help">
+            <div class="wm-1200">
+                <div class="help-lsit">
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_9.html" rel="nofollow">预订常见问题</a>
+                        </dt>
+                        <dd>
+                                  
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_10.html" rel="nofollow">付款方式</a>
+                        </dt>
+                        <dd>
+                         
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_11.html" rel="nofollow">签订合同</a>
+                        </dt>
+                        <dd>
+                        
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_12.html" rel="nofollow">其它问题</a>
+                        </dt>
+                        <dd>
+                            <a href="/help/show_43.html" rel="nofollow">如何获取发票？</a>
+                            <a href="/help/show_16.html" rel="nofollow">预订酒店的问题</a>                              
+                        </dd>
+                    </dl>              
+                    <div class="st-wechat">
+                    </div>
+                </div>
+            </div>
+        </div><!--帮助 扫码-->
+        <div class="st-footer">
+            <div class="wm-1200">
+                <div class="st-foot-menu">
+                    <a href="http://demo368.wanziku.cn/servers/index_1.html"  target="_blank" rel="nofollow">关于我们</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_1.html"  target="_blank" rel="nofollow">法律声明 </a>
+                    <a href="http://demo368.wanziku.cn/servers/index_2.html"  target="_blank" rel="nofollow">联系我们</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_10.html"  target="_blank" rel="nofollow">隐私保护</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_4.html"  target="_blank" rel="nofollow">支付方式</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_7.html"  target="_blank" rel="nofollow">法律声明</a>          
+                </div><!--底部导航-->
+                <div class="st-foot-edit">
+                    <p>偶很快就会考虑</p>        
+                </div><!--网站底部介绍-->
+                <div class="support">技术支持：
+                    <a href="http://www.stourweb.com/" target="_blank">思途CMS</a>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="st-sidemenu-box" style="height: 234px; right: 0px;">
+            <div class="st-sidemenu-con">
+                <ul>
+                    <li class="myorder">
+                        <a href="/member/">我的订单</a>
+                    </li>
+                </ul>
+                <div class="st-sidemenu-bom">
+                    <div class="st-backTop" id="st-backTop">
+                        <a href="javascript:void(0)">TOP</a>
+                    </div>
+                    <div class="st-sidemenu-closed"></div>
+                </div>
+            </div>
+            <div class="st-travel-show" style="right: -100px;"></div>
+        </div>
+        <script>
+            getConsize();
+            $(function(){
+                $(window).resize(function(){
+                    getConsize()
+                });
+                //返回顶部
+                $('#st-backTop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});
+                //隐藏显示侧边导航
+                $('.st-sidemenu-closed').click(function(){
+                    $('.st-sidemenu-box').animate({right:'-35px'},100,function(){
+                        $('.st-travel-show').animate({right:'0'},200)
+                    })
+                })
+                $('.st-travel-show').click(function(){
+                    $(this).animate({right:'-100px'},100,function(){
+                        $('.st-sidemenu-box').animate({right:'0'},200)
+                    })
+                })
+            })
+            //动态获取改变窗口高度
+            function getConsize(){
+                $('.st-sidemenu-box').height($(window).height());
+            }
+        </script> 
+        <div class="st-link"> 
+            <div class="wm-1200"> 
+                <div class="st-link-list"> 
+                    <dl> 
+                        <dt>友情链接：</dt> 
+                        <dd> 
+                            <a href="http://www.shqipaipai.com" target="_blank">企排排</a> 
+                        </dd> 
+                    </dl> 
+                </div> 
+            </div> 
+        </div><!--友情链接--> 
+        <script type="text/html" id="tpl_spot">
+            <ul class="st-cp-list">
+                {{each list as value i}}
+                <li {{if (i+1)%4==0}}class="mr_0"{{/if}}>
+                <i class="hot-ico"></i>
+                <a class="pic" href="{{value.url}}" target="_blank"><img src="{{value.litpic}}" alt="{{value.title}}" /></a>
+                <p class="tit"><a href="{{value.url}}" target="_blank">{{value.title}}</a></p>
+                <p class="data">
+                    {{if value.sellprice}}
+                    <del>原价：<i class="currency_sy">￥</i>{{value.sellprice}}</del>
+                    {{/if}}
+                    {{if value.price}}
+                    <span><b><i class="currency_sy">￥</i>{{value.price}}</b>起</span>
+                    {{else}}
+                    <span><b></b></span>
+                    {{/if}}
+                </p>
+                </li>
+                {{/each}}
+            </ul>
+        </script> 
+        <script>
+            $(function(){
+                //景点门票首页焦点图
+                $('.st-scenic-slideBox').slide({mainCell:'.bd ul',effect:"fold",easing:'easeOutCirc',autoPlay:true})
+                //选中第一个选项
+                $('.st-tabnav').each(function(i,obj){
+                   // $(obj).find('span').first().addClass('on');
+                })
+                $('.st-tabnav').find('span').click(function(){
+                    var destid = $(this).attr('data-id');
+                    var url = SITEURL+'spot/ajax_index_spot';
+                    var content = $(this).data(destid);
+                    var concontain = $(this).parents('.st-cp-slideTab').first().find('.st-tabcon');
+                    $(this).addClass('on').siblings().removeClass('on');
+                    var urlmore = $(this).attr("data-url");
+                    $(this).parent().find('.more').attr('href',urlmore);
+                    concontain.html('<img src="/res/images/loading.gif" style="display:block;width:28px;height:28px;margin:160px auto 157px auto;">');
+                    if(content){
+                        concontain.html(content);
+                    }else{
+                        $.getJSON(url, {destid:destid,pagesize:4}, function(data) {
+                            var licontent = template('tpl_spot',data);
+                            concontain.html(licontent);
+                            concontain.data(destid,licontent);
+                        });
+                    }
+                })
+            })
+        </script>  
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册界面</title>
+
+		<link rel="stylesheet" type="text/css" href="./css/register.css">
+		<link rel="stylesheet" type="text/css" href="../../resources/lib/pnotify/pnotify.custom.min.css">
+
+		<script type="text/javascript" src="../../resources/lib/jquery/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="../../resources/js/tool.js"></script>
+
+		<script type="text/javascript" src="../../resources/lib/pnotify/pnotify.custom.min.js"></script>
+		<script type="text/javascript" src="../../resources/lib/pnotify/pnotifyFunc.js"></script>
+
+		<script type="text/javascript" src="./js/register.js"></script>
+		
+	</head>
+	<body> 
+		<div class="menu">
+			<div class="menu-left">注册通行证</div>
+			<div class="menu-right">
+				<a href="../login/login.html">退出</a>
+			</div>
+		</div>
+		<form class="wrap" onsubmit="return false;">
+			<div class="content">
+				<div class="user">
+					用&nbsp;&nbsp;户&nbsp;&nbsp;名：<input type="text" name="username" />
+					<span class="info user-input">请输入小于13个字符的用户名，可由数字字母下划线组成（空格忽略）<p></p></span>
+					<span class="info-error user-error">请输入正确的用户名！<p></p></span>
+					<span class="ok user-ok"></span>
+				</div>
+				<div class="password">
+					密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 码：<input type="password" name="password" />
+					<span class="info pass-input">请输入6-18个字符的密码，由数字字母下划线组成（不能出现空格）<p></p></span>
+					<span class="info-error pass-error">请输入正确的密码！<p></p></span>
+					<span class="safe">安全等级：<strong class="s s1"></strong><strong class="s s2"></strong><strong class="s s3"></strong><strong class="word"></strong><p></p></span>
+					<span class="ok pass-ok"></span>
+				</div>
+				<div class="confirm-pass">
+					确认密码：<input type="password" name="confirm-pass" />
+					<span class="info confirm-pass-input">请再次输入密码。<p></p></span>
+					<span class="info-error confirm-pass-error">两次密码不一致！<p></p></span>
+					<span class="ok confirm-pass-ok"></span>
+				</div>
+				<div class="email">
+					电子邮箱：<input type="text" name="email" />
+					<span class="info email-input">请输入您的电子邮箱。<p></p></span>
+					<span class="info-error email-error">请输入正确的电子邮箱！<p></p></span>
+					<span class="ok email-ok"></span>
+					<ul class="auto-complete">
+						<li><span></span>@qq.com</li>
+						<li><span></span>@163.com</li>
+						<li><span></span>@126.com</li>
+						<li class="last-li"><span></span>@yahoo.com</li>
+					</ul>
+				</div>
+				<div>
+					<button type="submit" onclick="register();">注册</button>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

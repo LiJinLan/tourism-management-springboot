@@ -1,0 +1,568 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>会员首页-旅游1</title>
+        <script>
+            window.SITEURL = "/"; 
+            window.CURRENCY_SYMBOL="￥";
+        </script>    
+        <link type="text/css" href="./css/extend.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/header.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/footer.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/layer.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/index.css" rel="stylesheet"  />
+        <link type="text/css" href="../../../../resources/js/nav/iconfont.css" rel="stylesheet"  />
+        <link type="text/css" href="../../../../resources/js/nav/nav.css" rel="stylesheet"  />
+
+        <link type="text/css" href="./css/zTreeStyle/zTreeStyle.css" rel="stylesheet"  />
+        <link type="text/css" href="../../../../resources/lib/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet"  />
+
+
+        <script type="text/javascript" src="./js/common.js"></script>
+        <script type="text/javascript" src="../../../../resources/lib/jquery/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="./js/jquery.ztree.core.js"></script>
+        <script type="text/javascript" src="./js/jquery.ztree.excheck.js"></script>
+        <script type="text/javascript" src="../../../../resources/lib/bootstrap/3.3.5/js/bootstrap.js"></script>
+        <script type="text/javascript" src="./js/layer.js"></script>
+        <script type="text/javascript" src="./js/SuperSlide.min.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/util.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/user.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/nav/nav.js"></script>
+        <script type="text/javascript" src="../../../frontmana/index/page/js/search.js"></script>
+    </head>
+    <body>
+        <div class="web-top">
+            <div class="wm-1200">
+                <div class="notice-txt"><p><span style="color: #808080">旅游管理系统网站：订购电话：7006-0999-27</span></p></div>
+                <div class="scroll-order">
+                    <ul>
+                        <li>13551***1小时前评论了<a href="javaScript:;" target="_blank">九寨沟犀牛海</a></li>
+                        <li>13545***2小时前评论了<a href="javaScript:;" target="_blank">九寨沟星宇国际大酒店</a></li>
+                        <li>18682***33分钟前评论了<a href="javaScript:;" target="_blank">峨眉山乐山二日游</a></li>                 
+                    </ul>
+                </div>
+                <div class="top-login">
+                    <span id="loginstatus">
+                    </span>
+                    
+                    <dl class="dh">
+                        <dt><i></i>网站导航</dt>
+                        <dd>
+                            <a href="../../../frontmana/lines/page/index.html">线路</a>
+                            <a href="../../../frontmana/hotels/page/index.html">酒店</a>
+                            <a href="../../../frontmana/scenic/page/index.html">景点</a>                        
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--顶部-->
+        <div class="st-header">
+            <div class="wm-1200">
+                <div class="st-logo">
+                    <a href="/"></a>
+                </div>
+                <div class="st-top-search">
+                    <div class="st-search-down">
+                        <strong id="typename"><i></i></strong>
+                        <ul class="st-down-select searchmodel">
+                            <li data-id="0" data-url="all">全部</li>
+                            <li data-id="1" data-url="line">线路</li>
+                            <li data-id="2" data-url="hotel">酒店</li>
+                            <li data-id="5" data-url="scenic">景点</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="st-txt searchkeyword" placeholder="输入目的地、名称、省份、城市" />
+                    <span>
+                                                 
+                    </span>
+                    <input type="button" onclick="searchKey();" value="搜索" class="st-btn" />
+                </div>
+                <div class="st-link-way">
+                    <strong>客服电话：</strong>
+                    <em>18757999962</em>
+                </div>
+            </div>
+        </div><!--header-->
+        <div class="st-nav">
+            <div class="wm-1200">
+                <div class="st-global">
+                    <div class="global-bt">旅游导航</div>
+                   <!--  <div class="global-list" style="display: none;">
+                        <div class="gl-list-tabbox">
+                            <h3>
+                                <strong><em></em><a href="" target="_blank">云南旅游</a></strong>
+                                <p>
+                                    <a href="" target="_blank">001</a>                         
+                                </p>
+                                <i class="arrow-rig"></i>
+                            </h3>
+                            <div class="tabcon-item">
+                                <div class="item-list">
+                                    <dl>
+                                        <dt>
+                                            <a href="" target="_blank">001</a>
+                                        </dt>
+                                        <dd>
+                                 
+                                        </dd>
+                                    </dl>                  
+                                </div>
+                                <div class="ad-box">
+                                                                                          
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gl-list-tabbox">
+                            <h3>
+                                <strong><em></em><a href="" target="_blank">广东旅游</a></strong>
+                                <p>
+                                                                                      
+                                </p>
+                                <i class="arrow-rig"></i>
+                            </h3>
+                            <div class="tabcon-item">
+                                <div class="item-list">
+                                                                              
+                                </div>
+                                <div class="ad-box">
+                                                                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gl-list-tabbox">
+                            <h3>
+                                <strong><em></em><a href="" target="_blank">自定义</a></strong>
+                                <p>
+                                                                                      
+                                </p>
+                                <i class="arrow-rig"></i>
+                            </h3>
+                            <div class="tabcon-item">
+                                <div class="item-list">
+                                                                                      
+                                </div>
+                                <div class="ad-box">
+                                                                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <script>
+                    $(function(){
+                        $('.gl-list-tabbox,.st-dh-con').hover(function(){
+                            $(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+                            $(this).children('h3').find('.arrow-rig').hide();
+                        },function(){
+                            $(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+                            $(this).children('h3').find('.arrow-rig').show();
+                        })
+                        $('.global-list').hide();
+                        $('.st-global').hoverDelay(function(){
+                            $('.global-list').show();
+                        },function(){
+                            $('.global-list').hide();
+                        })
+                    })
+                </script>
+                <div class="st-menu">
+                    <a href="../../../frontmana/index/page/index.html">首页<s></s></a>
+                    <a href="../../../frontmana/lines/page/index.html">线路<i class="st-new-ico"></i><s></s></a>
+                    <a href="../../../frontmana/hotels/page/index.html">酒店</a>       
+                    <a href="../../../frontmana/scenic/page/index.html">景点<i class="st-hot-ico"></i><s></s></a>              
+                </div>
+            </div>
+        </div><!--主导航-->
+        <script>
+            var SITEURL = "/";
+            $(function(){
+                $(".searchmodel li").click(function(){
+                    var typeid = $(this).attr('data-id');
+                    var durl = $(this).attr('data-url');
+                    var typename = $(this).text();
+                    $("#typename").html(typename+'<i></i>');
+                    $("#typename").attr('data-id',typeid);
+                    $("#typename").attr('data-url',durl);
+                })
+                $(".searchmodel li:first").trigger('click');
+                //search
+                $('.st-btn').click(function(){
+                    return true;
+                })
+                //导航的选中状态
+                $(".st-menu a").each(function(){
+                    var url= window.location.href;
+                    url=url.replace('index.php','');
+                    url=url.replace('index.html','');
+                    var ulink=$(this).attr("href");
+                    if(url==ulink)
+                    {
+                        $(this).addClass('active');
+                    }
+                })
+            })
+        </script> 
+        <div class="big">
+            <div class="wm-1200">
+                <div class="st-guide">
+                    <a>首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;会员中心
+                 </div><!--面包屑-->
+                <div class="st-main-page">
+                    <div class="user-side-menu">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                    <div class="user-order-box">
+                        <div class="user-home-box">
+                            <div class="add-menu-btn">
+                                
+                            </div>
+                            <div class="content-menu">
+                                <div class="addrole">
+                                    <h4>角色树显示：</h4>
+                                    <div id="role-tree-box" class="ztree">
+
+                                    </div>
+                                </div>
+                                <div class="show-menu">
+                                    <h4>4角色权限访问菜单树显示：</h4>
+                                    <button onclick="deleteRoleMenu()">删除菜单</button> 
+                                    <div id="role-menu-tree-box" class="ztree">
+
+                                    </div>
+                                </div>
+                                <div class="show-menu">
+                                    <h4>所有菜单树显示：</h4>
+                                    <button onclick="addRoleMenu()">添加菜单</button> 
+                                    <div id="check-menu-tree-box" class="ztree">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="st-brand">
+            <div class="wm-1200">
+                <div class="st-serve">
+                    <dl class="ico01 bor_0">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光价格</em>
+                            <span>同类产品，保证低价</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico02">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光行程</em>
+                            <span>品质护航，透明公开</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico03">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光服务</em>
+                            <span>专属客服，快速响应</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico04">
+                        <dt></dt>
+                        <dd>
+                            <em>救援保障</em>
+                            <span>途中意外，保证援助</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--品牌介绍-->
+        <div class="st-help">
+            <div class="wm-1200">
+                <div class="help-lsit">
+                    <dl>
+                        <dt>
+                            <a>预订常见问题</a>
+                        </dt>
+                        <dd>
+                                  
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>付款方式</a>
+                        </dt>
+                        <dd>
+                         
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>签订合同</a>
+                        </dt>
+                        <dd>
+                        
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>其它问题</a>
+                        </dt>
+                        <dd>
+                            <a>如何获取发票？</a>
+                            <a>预订酒店的问题</a>                              
+                        </dd>
+                    </dl>              
+                    <div class="st-wechat">
+                    </div>
+                </div>
+            </div>
+        </div><!--帮助 扫码-->
+        <div class="st-footer">
+            <div class="wm-1200">
+                <div class="st-foot-menu">
+                    <a>关于我们</a>
+                    <a>法律声明 </a>
+                    <a>联系我们</a>
+                    <a>隐私保护</a>
+                    <a>支付方式</a>
+                    <a>法律声明</a>          
+                </div><!--底部导航-->
+                <div class="st-foot-edit">
+                    <p>偶很快就会考虑</p>        
+                </div><!--网站底部介绍-->
+                <div class="support">技术支持：
+                    <a>思途CMS</a>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="st-sidemenu-box" style="height: 234px; right: 0px;">
+            <div class="st-sidemenu-con">
+                
+                <div class="st-sidemenu-bom">
+                    <div class="st-backTop" id="st-backTop">
+                        <a href="javascript:void(0)">TOP</a>
+                    </div>
+                    <div class="st-sidemenu-closed"></div>
+                </div>
+            </div>
+            <div class="st-travel-show" style="right: -100px;"></div>
+        </div>
+        <script>
+            getConsize();
+            $(function(){
+                $(window).resize(function(){
+                    getConsize()
+                });
+                //返回顶部
+                $('#st-backTop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});
+                //隐藏显示侧边导航
+                $('.st-sidemenu-closed').click(function(){
+                    $('.st-sidemenu-box').animate({right:'-35px'},100,function(){
+                        $('.st-travel-show').animate({right:'0'},200)
+                    })
+                })
+                $('.st-travel-show').click(function(){
+                    $(this).animate({right:'-100px'},100,function(){
+                        $('.st-sidemenu-box').animate({right:'0'},200)
+                    })
+                })
+            })
+            //动态获取改变窗口高度
+            function getConsize(){
+                $('.st-sidemenu-box').height($(window).height());
+            }
+        </script>
+        <script>
+            $(function(){
+                $("#nav_index").addClass('on');
+                $(".user-msg-tj li").click(function(){
+                    var url = $(this).attr('data-url');
+                    if(url!=''){
+                        location.href = url;
+                    }
+                })
+            })
+        </script>
+        <!--订单中心用的js事件-->
+        <script>
+            $(function(){
+                //取消订单
+                $(".cancel_order").click(function(){
+                    var orderid = $(this).attr('data-orderid');
+                    var url = SITEURL +'member/order/ajax_order_cancel';
+                    layer.confirm('确定取消订单吗？', {
+                        icon: 3,
+                        btn: ['放弃','确定'], //按钮
+                        btn1:function(){
+                            layer.closeAll();
+                        },
+                        btn2:function(){
+                            $.getJSON(url,{orderid:orderid},function(data){
+                                if(data.status){
+                                    layer.msg('取消订单成功', {icon:6,time:1000});
+                                    setTimeout(function(){location.reload()},1000);
+                                }
+                                else{
+                                    layer.msg('取消订单失败', {icon:5,time:1000});
+                                }
+                            })
+                        },
+                        cancel:function(){
+                            layer.closeAll();
+                        }
+                    })
+                })
+            })
+        </script>
+
+        <!-- 模态框-添加一级菜单 -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="firstMenuAddModal">
+            <div class="modal-dialog" role="document" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">新增一级菜单</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="select-tag-add form-horizontal">
+                        </form>
+                        <form class="tag-add-form form-horizontal">
+                        </form>
+                        <div class="tag-add-category-template">
+                            <div class="col-md-6">
+                                <div class="col-md-3">
+                                    <label>一级菜单名：</label>
+                                    <input name="firstMenuName" type="text" />
+                                    <span>*</span>
+                                </div>
+                                <div class="col-menu-1">
+                                    <label>一级菜单图片：</label>
+                                    <input type="file">
+                                    <button onclick="showFirstMenuImg();">上传图片</button>
+                                    <img class="firstMenuImg">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick="addFirstMenuBtn();">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框-添加二级菜单 -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="secondMenuAddModal">
+            <div class="modal-dialog" role="document" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">新增二级菜单</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="select-tag-add form-horizontal">
+                        </form>
+                        <form class="tag-add-form form-horizontal">
+                        </form>
+                        <div class="tag-add-category-template">
+                            <div class="col-md-6">
+                                <div class="col-md-3" id="secondMenuName">
+                                    <label>二级菜单名：</label>
+                                    <input name="secondMenuName" type="text" />
+                                    <span>*</span>
+                                </div>
+                                <div class="col-md-3" id="secondMenuUrl">
+                                    <label>二级菜单url：</label>
+                                    <input name="secondMenuUrl" type="text" />
+                                    <span>*</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick="addSecondMenuBtn();">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框-修改一级菜单 -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="updateFirstMenuModal">
+            <div class="modal-dialog" role="document" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">修改一级菜单</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="select-tag-add form-horizontal">
+                        </form>
+                        <form class="tag-add-form form-horizontal">
+                        </form>
+                        <div class="tag-add-category-template">
+                            <div class="col-md-6">
+                                <div class="col-md-3" id="modifyFirstMenuName">
+                                    <label>一级菜单名：</label>
+                                    <input name="modifyFirstMenuName" type="text" />
+                                    <span>*</span>
+                                </div>
+                                <div class="col-menu-1">
+                                    <label>一级菜单图片：</label>
+                                    <img class="oldfirstMenuImg">
+                                    <input type="file">
+                                    <button onclick="showNewFirstMenuImg();">上传图片</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick="modifyFirstMenuBtn();">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模态框-修改二级菜单 -->
+        <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel" id="updateSecondMenuModal">
+            <div class="modal-dialog" role="document" style="width:800px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="gridSystemModalLabel">修改二级菜单</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="select-tag-add form-horizontal">
+                        </form>
+                        <form class="tag-add-form form-horizontal">
+                        </form>
+                        <div class="tag-add-category-template">
+                            <div class="col-md-6">
+                                <div class="col-md-3" id="modifySecondMenuName">
+                                    <label>二级菜单名：</label>
+                                    <input name="modifySecondMenuName" type="text" />
+                                    <span>*</span>
+                                </div>
+                                <div class="col-md-3" id="modifySecondMenuUrl">
+                                    <label>二级菜单url：</label>
+                                    <input name="modifySecondMenuUrl" type="text" />
+                                    <span>*</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-primary" onclick="modifySecondMenuBtn();">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

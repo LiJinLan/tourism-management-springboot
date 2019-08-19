@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.UserDao">
+	
+	<insert id="addUser" parameterType="Map" >
+		insert into user (id, email, name, password, roleId, realName, telephone, address, sex, birthday, idCard, createTime, lastModifyTime)
+		values (#{id}, #{email}, #{name}, #{password}, #{roleId}, #{realName}, #{telephone}, #{address}, #{sex}, #{birthday}, #{idCard}, #{createTime}, #{lastModifyTime})
+	</insert>
+
+	<select id="queryUserByNamePwd" parameterType="Map" resultType="Map">
+		select id, email, name, password, roleId, realName, telephone, address, sex, birthday, idCard, createTime, lastModifyTime
+		from user
+		where name =#{name} and password =#{password}
+	</select>
+	
+	<select id="queryUserById" parameterType="String" resultType="Map">
+		select id, email, name, password, roleId, realName, telephone, address, sex, birthday, idCard, createTime, lastModifyTime
+		from user
+		where id =#{userId}
+	</select>
+
+	<select id="queryUserByName" parameterType="String" resultType="Map">
+		select id, email, name, password, roleId, realName, telephone, address, sex, birthday, idCard, createTime, lastModifyTime
+		from user
+		where name =#{userName}
+	</select>
+</mapper>

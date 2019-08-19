@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.MenuDao">
+	<insert id="addFirstMenu" parameterType="Map" >
+		insert into first_menu (id, name, imagePath)
+		values (#{id}, #{name}, #{imagePath})
+	</insert>
+	<insert id="addSecondMenu" parameterType="Map" >
+		insert into second_menu (id, fmid, name, url)
+		values (#{id}, #{fmid}, #{name}, #{url})
+	</insert>
+	<insert id="addRoleSecondMenu" parameterType="Map" >
+		insert into role_second_menu (id, roleId, secmId)
+		values (#{id}, #{roleId}, #{secmId})
+	</insert>
+	<select id="queryFirstMenuByName" parameterType="String" resultType="Map">
+		select id, name, imagePath
+		from first_menu
+		where name =#{name}
+	</select>
+	<select id="queryFirstMenuById" parameterType="String" resultType="Map">
+		select id, name, imagePath
+		from first_menu
+		where id =#{id}
+	</select>
+		<select id="querySecondMenuById" parameterType="String" resultType="Map">
+		select id, fmid, name, url
+		from second_menu
+		where id =#{id}
+	</select>
+	<select id="queryFirstMenuAll" resultType="Map">
+		select id, name, imagePath
+		from first_menu order by id asc
+	</select>
+	<select id="querySecondMenuAll" resultType="Map">
+		select id, fmid, name, url
+		from second_menu order by id asc
+	</select>
+	<select id="queryMenusByRole" parameterType="String" resultType="Map">
+		select  A.id as roleId, A.name as roleName, D.id as firstMenuId, D.name as firstMenu,D.imagePath, C.id as secondMenuId, C.name as secondMenu, C.url as url
+	    from role A inner join role_second_menu B on A.id = #{roleId} and A.id = B.roleId
+	    inner join second_menu C on B.secmId = C.id
+	    inner join first_menu D on C.fmId = D.id order by D.id;  
+	</select>
+	<update id="updateFirstMemu" parameterType="Map">
+		update first_menu set name = #{name}, imagePath = #{imagePath} where id =#{id}
+	</update>
+	<update id="updateSecondMemu" parameterType="Map">
+		update second_menu set fmid = #{fmid}, name = #{name}, url = #{url} where id =#{id}
+	</update>
+	<delete id="deleteFirstMenu" parameterType="String">
+		delete from first_menu where id = #{firstMenuId}
+	</delete>
+	<delete id="deleteSecondMenu" parameterType="String">
+		delete from second_menu where id = #{secondMenuId}
+	</delete>
+	<delete id="deleteRoleSecondMenu" parameterType="Map">
+		delete from role_second_menu where roleId = #{roleId} and secmId = #{secmId}
+	</delete>
+</mapper>

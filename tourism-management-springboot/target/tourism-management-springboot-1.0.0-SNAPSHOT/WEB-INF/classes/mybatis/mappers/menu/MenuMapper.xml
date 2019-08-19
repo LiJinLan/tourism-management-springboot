@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.MenuDao">
+	<select id="queryMenusByRole" parameterType="String" resultType="Map">
+		select  A.id as roleId, A.name as roleName,  D.name as firstMenu, C.name as secondMenu, C.url as url
+	    from role A inner join role_second_menu B on A.id = #{roleId} and A.id = B.roleId
+	    inner join second_menu C on B.secmId = C.id
+	    inner join first_menu D on C.fmId = D.id order by D.id;  
+	</select>
+</mapper>

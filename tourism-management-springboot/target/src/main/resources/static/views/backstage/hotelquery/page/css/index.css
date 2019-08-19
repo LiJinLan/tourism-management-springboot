@@ -1,0 +1,12 @@
+.user-home-order table .title {
+	color: #0082dd;
+}
+
+.user-home-order table .operation a {
+	color: #0082dd;
+	margin-right: 6px;
+}
+
+.user-home-order table .operation a:hover {
+	color: green;
+}

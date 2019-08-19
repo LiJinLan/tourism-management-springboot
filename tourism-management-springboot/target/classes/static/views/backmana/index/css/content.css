@@ -1,0 +1,58 @@
+.right {
+	width: calc(100vw - 220px);
+	height: 100%;
+	float: left;
+}
+
+.right .menu {
+	float: left;
+	width: 100%;
+	height: 65px;
+	font: normal 14px/24px 'MicroSoft YaHei';
+	text-align: center;
+}
+
+.right .menu .menu-left {
+	float: left;
+	width: 75%;
+	height: 100%;
+/*	background-color: #005dff;*/
+	background-color: #00fffc;
+}
+
+.right .menu .menu-right {
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+
+.right .menu .menu-right .userimg {
+    width: 10%;
+    height: 50%;
+    float: left;
+    margin-top: 21px;
+    margin-left: 13%;
+    background-size: 100% 100%;
+    background-image: url(../images/user.png);
+}
+
+.right .menu .menu-right .username {
+    width: 30%;
+    height: 50%;
+    float: left;
+    margin-top: 26px;
+    margin-left: 3%;
+    font-size: 16px;
+}
+
+.right .menu .menu-right .exit {
+    width: 10%;
+    height: 50%;
+    float: left;
+    margin-top: 21px;
+    margin-left: 13%;
+    background-size: 100% 100%;
+    background-image: url(../images/exit.png);
+}
+
+

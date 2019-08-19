@@ -1,0 +1,25 @@
+.user-home-order table .title {
+	color: #0082dd;
+}
+
+.user-home-order table .linedt {
+	width: 105px;
+	height: 80px;
+	float: left;
+}
+
+.user-home-order table .linedd {
+	width: 200px;
+	height: 80px;
+	float: left;
+}
+
+.user-home-order table .operation a {
+	color: #0082dd;
+	margin-right: 10px;
+}
+
+.user-home-order table .operation a:hover {
+	color: green;
+}
+

@@ -1,0 +1,613 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>酒店-旅游1</title>
+        <script>
+            window.SITEURL = "/";
+            window.CURRENCY_SYMBOL="￥";
+        </script>    
+        <link type="text/css" href="./css/extend.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/header.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/footer.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/result.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/WdatePicker.css" rel="stylesheet"  />
+        
+        <script type="text/javascript" src="./js/page.js"></script>
+        <script type="text/javascript" src="./js/result.js"></script>
+        <script type="text/javascript" src="./js/SuperSlide.min.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/util.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/user.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript" src="../../index/page/js/search.js"></script>
+    </head>
+    <body>
+        <div class="web-top"> 
+            <div class="wm-1200"> 
+                <div class="notice-txt">
+                    <p><span style="color: #808080">旅游管理系统网站：订购电话：7006-0999-27</span></p>
+                </div> 
+                <div class="scroll-order"> 
+                    <ul> 
+                        <li>13551***1小时前评论了<a href="javaScript:;" target="_blank">九寨沟犀牛海</a></li>
+                        <li>13545***2小时前评论了<a href="javaScript:;" target="_blank">九寨沟星宇国际大酒店</a></li>
+                        <li>18682***33分钟前评论了<a href="javaScript:;" target="_blank">峨眉山乐山二日游</a></li>
+                    </ul> 
+                </div> 
+                <div class="top-login"> 
+                    <span id="loginstatus"> </span> 
+                    
+                    <dl class="dh"> 
+                        <dt>
+                            <i></i>网站导航
+                        </dt> 
+                        <dd> 
+                            <a href="../../lines/page/index.html">线路</a> 
+                           <a href="../../hotels/page/index.html">酒店</a> 
+                           <a href="../../scenic/page/index.html">景点</a> 
+                        </dd> 
+                    </dl> 
+                </div> 
+            </div> 
+        </div>
+        <!--顶部--> 
+        <div class="st-header"> 
+            <div class="wm-1200"> 
+                <div class="st-logo"> 
+                    <a href="/"></a> 
+                </div> 
+                <div class="st-top-search">
+                    <div class="st-search-down">
+                        <strong id="typename"><i></i></strong>
+                        <ul class="st-down-select searchmodel">
+                            <li data-id="0" data-url="all">全部</li>
+                            <li data-id="1" data-url="line">线路</li>
+                            <li data-id="2" data-url="hotel">酒店</li>
+                            <li data-id="5" data-url="scenic">景点</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="st-txt searchkeyword" placeholder="输入目的地、名称、省份、城市" />
+                    <span>
+                                                 
+                    </span>
+                    <input type="button" onclick="searchKey();" value="搜索" class="st-btn" />
+                </div>
+                <div class="st-link-way"> 
+                    <strong>客服电话：</strong> 
+                    <em>18757999962</em> 
+                </div> 
+            </div> 
+        </div>
+        <!--header--> 
+        <div class="st-nav"> 
+            <div class="wm-1200"> 
+                <div class="st-global"> 
+                    <div class="global-bt">旅游导航</div> 
+                   <!--  <div class="global-list" style="display: none;"> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">云南旅游</a>
+                                </strong> 
+                                <p> 
+                                    <a href="" target="_blank">001</a> 
+                                </p><i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                    <dl> 
+                                        <dt>
+                                            <a href="" target="_blank">001</a>
+                                        </dt> 
+                                        <dd> 
+                                            <a href="">0012</a> 
+                                        </dd> 
+                                    </dl> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">广东旅游</a>
+                                </strong> 
+                                <p> 
+                                </p> 
+                                <i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">自定义</a>
+                                </strong> 
+                                <p> 
+                                </p> 
+                                <i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>  -->
+                </div> 
+                <script>
+                    $(function(){
+                        $('.gl-list-tabbox,.st-dh-con').hover(function(){
+                            $(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+                            $(this).children('h3').find('.arrow-rig').hide();
+                        },function(){
+                            $(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+                            $(this).children('h3').find('.arrow-rig').show();
+                        })
+                        $('.global-list').hide();
+                        $('.st-global').hoverDelay(function(){
+                            $('.global-list').show();
+                        },function(){
+                            $('.global-list').hide();
+                        })
+                    })
+                </script> 
+                <div class="st-menu"> 
+                    <a href="../../index/page/index.html">首页<s></s></a> 
+                    <a href="../../lines/page/index.html">线路 <i class="st-new-ico"></i><s></s> </a> 
+                    <a href="../../hotels/page/index.html">酒店 </a> 
+                    <a href="../../scenic/page/index.html">景点 <i class="st-hot-ico"></i><s></s> </a> 
+                </div> 
+            </div> 
+        </div>
+        <!--主导航--> 
+        <script>
+            var SITEURL = "/";
+            $(function(){
+                $(".searchmodel li").click(function(){
+                    var typeid = $(this).attr('data-id');
+                    var durl = $(this).attr('data-url');
+                    var typename = $(this).text();
+                    $("#typename").html(typename+'<i></i>');
+                    $("#typename").attr('data-id',typeid);
+                    $("#typename").attr('data-url',durl);
+                })
+                $(".searchmodel li:first").trigger('click');
+                //search
+                $('.st-btn').click(function(){
+                    return true;
+                })
+                //导航的选中状态
+                $(".st-menu a").each(function(){
+                    var url= window.location.href;
+                    url=url.replace('index.php','');
+                    url=url.replace('index.html','');
+                    var ulink=$(this).attr("href");
+                    if(url==ulink)
+                    {
+                        $(this).addClass('active');
+                    }
+                })
+            })
+        </script>   
+        <div class="big">
+            <div class="wm-1200">
+                <div class="st-guide">
+                    <a href="/">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;酒店        
+                </div><!--面包屑-->
+                <div class="st-hotel-home-top">
+                     <div class="st-hotel-search">
+                        <dl class="search-dl">
+                            <dt>目的地</dt>
+                            <dd>
+                                <input type="text" class="h-text-search destname" onClick="hSearchShow()" placeholder="中文/拼音/首字母" >
+                                <div class="mdd-city-box" id="mdd-city-box">
+                                    <div class="ss-mdd-tit">
+                                        <span>可直接输入城市或城市拼音</span><i id="mdd-hot-closed" onClick="hSearchHide()"></i>
+                                    </div>
+                                    <div class="ss-mdd-box">
+                                        <div class="st-tabnav">
+                                            <span class="on" data-id="hot">热门</span>
+                                            <span data-id="a,b,c">ABC</span>
+                                            <span data-id="d,e,f,g">DEFG</span>
+                                            <span data-id="h,j,k">HJK</span>
+                                            <span data-id="l,m,n">LMN</span>
+                                            <span data-id="p,q,r,s">PQRS</span>
+                                            <span data-id="t,w,x">TWX</span>
+                                            <span data-id="y,z">YZ</span>
+                                        </div>
+                                        <div class="st-tabcon" id="dest_list">
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <script type="text/html" id="tpl_dest_list">
+                        {{each list as value i}}
+                        <a href="javascript:;" data-id="{{value.id}}">{{value.kindname}}</a>
+                        {{/each}}
+                        </script>
+                        <script>
+                            $(function(){
+                                //按拼音筛选
+                                $('.st-tabnav').find('span').click(function(){
+                                    var url = SITEURL+'hotel/ajax_dest';
+                                    var id = $(this).attr('data-id');
+                                    var dest = $(this).data(id);
+                                    var obj = $(this);
+                                    if(dest!=undefined){
+                                        $("#dest_list").html(dest);
+                                    }else{
+                                        $.getJSON(url,{dataid:id},function(data){
+                                            if(data.list){
+                                                var destlist = template('tpl_dest_list',data);
+                                                obj.data(id,destlist);
+                                                $("#dest_list").html(destlist);
+                                            }
+                                        })
+                                    }
+                                    $(this).addClass('on').siblings().removeClass('on');
+                                })
+                                //选中目的地
+                                $('body').delegate('#dest_list a','click',function(){
+                                    var destname = $(this).text();
+                                    var destid = $(this).attr('data-id');
+                                    $(".destname").val(destname);
+                                    $(".destname").attr('data-id',destid);
+                                    $('.mdd-city-box').hide();
+                                })
+                                //按拼音搜索目的地
+                                $('.destname').keyup(function(){
+                                    hSearchHide();
+                                })
+                                $('.destname').Result({url:SITEURL+'destination/ajax_dest_by_pinyin',extraParams:{typeid:2}});
+                            })
+                        </script>
+                        <dl class="search-dl">
+                            <dt>入住时间</dt>
+                            <dd>
+                                <input type="text" class="h-text-search date-ico" id="txtHotelTime1" placeholder="yy-mm-dd" value="2018-11-05" >
+                            </dd>
+                        </dl>
+                        <dl class="search-dl">
+                            <dt>退房时间</dt>
+                            <dd>
+                                <input type="text" class="h-text-search date-ico" id="txtHotelTime2" placeholder="yy-mm-dd" value="2018-11-06" >
+                            </dd>
+                        </dl>
+                        <dl class="search-dl">
+                            <dt>酒店星级</dt>
+                            <dd>
+                                <input type="text" name="" class="h-text-search up-ico rankid" id="input-select" value="全部" >
+                                <input type="hidden" id="rankid" value="0"/>
+                                <div class="star-level-box">
+                                    <span data-id="1">一星级酒店</span>
+                                    <span data-id="2">二星级酒店</span>
+                                    <span data-id="3">三星级酒店</span>
+                                    <span data-id="4">四星级酒店</span>
+                                    <span data-id="5">五星级酒店</span>
+                                    <span data-id="6">六星级酒店</span>                 
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="search-dl">
+                            <dt>关键词</dt>
+                            <dd>
+                                <input type="text" name="keyword" class="h-text-search keyword" >
+                            </dd>
+                        </dl>
+                        <div class="st-hs-btn">
+                            <a href="javascript:;">搜索</a>
+                        </div>
+                    </div> --><!--酒店首页条件搜索
+                    <script>
+                        $(function(){
+                            //酒店搜索
+                            $('.st-hs-btn').click(function(){
+                                var rankid = $("#rankid").val();
+                                var destname = $(".destname").val();
+                                var keyword = $(".keyword").val();
+                                var destpy = "";
+                                if(destname!=''){
+                                    $.ajax({type:'POST',url:SITEURL+'hotel/ajax_dest_py',async:false,data:'destname='+destname,success:function(data){
+                                        destpy = data;
+                                    }})
+                                }
+                                var url = SITEURL+'hotels/';
+                                var py = '';
+                                if(destpy!=''){
+                                    py = destpy;
+                                }
+                                url+=py+'-'+rankid+'-0-0-0-0-1';
+                                if(keyword!=''){
+                                    url+="?keyword="+keyword;
+                                }
+                                window.location.href = url;
+                            })
+                        })
+                    </script>
+                    <!--酒店首页轮播图-->
+                    <div id="st-hotel-slideBox" class="st-hotel-slideBox">
+                        <div class="hd">
+                            <ul>
+                                <li>0</li>
+                            </ul>
+                        </div>
+                        <div class="bd">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="../uploads/main/allimg/20150923/20150923143441.jpg" width="858" height="324"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--前/后按钮代码-->
+                        <a class="prev" href="javascript:void(0)"></a>
+                        <a class="next" href="javascript:void(0)"></a>
+                    </div>
+                    <!--酒店首页轮播图结束-->
+                    <div class="st-hotel-home-box">
+                        <div class="hotel-tit-ico">
+                            <h3 class="hot-ico">热门推荐</h3>
+                            <a class="more">查看更多</a>
+                        </div>
+                        <div class="hotel-tj-box">
+                            <ul>
+                                <li>
+                                    <div class="pic">
+                                        <img class="fl" src="../uploads/2015/0923/32fb73145736d271318cd1fec809ddb1.jpg" />
+                                    </div>
+                                    <div class="txt">
+                                        <a>
+                                            <i></i>
+                                            <p class="ads">上海浦东新区沪南公路8657号</p>
+                                            <p class="price">
+                                                <span>电询</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <img class="fl" src="../uploads/2015/0910/481507a54700bf8c7847313fa2b01d15.png" />
+                                    </div>
+                                    <div class="txt">
+                                        <a>
+                                            <i></i>
+                                            <p class="ads">北京市..............................</p>
+                                            <p class="price">
+                                                <span>电询</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="pic">
+                                        <img class="fl" src="../uploads/2015/0923/298c188644bc41b60f00e86528b3f69a.jpg" />
+                                    </div>
+                                    <div class="txt">
+                                        <a>
+                                            <i></i>
+                                            <p class="ads">九寨沟风景区</p>
+                                            <p class="price">
+                                                <span>电询</span>
+                                            </p>
+                                        </a>
+                                    </div>
+                                </li>           
+                            </ul>
+                        </div>
+                    </div><!--热门推荐-->
+                    <div class="st-hotel-home-box">
+                        <div class="hotel-tit-ico">
+                            <h3 class="jx-ico">精选酒店</h3>
+                            <a class="more">查看更多</a>
+                        </div>
+                        <div class="hotel-jx-box">
+                            <ul>
+                            
+                            </ul>
+                        </div>
+                    </div><!--精选酒店-->
+                </div>
+            </div>
+        </div>
+
+        <div class="st-brand">
+            <div class="wm-1200">
+                <div class="st-serve">
+                    <dl class="ico01 bor_0">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光价格</em>
+                            <span>同类产品，保证低价</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico02">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光行程</em>
+                            <span>品质护航，透明公开</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico03">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光服务</em>
+                            <span>专属客服，快速响应</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico04">
+                        <dt></dt>
+                        <dd>
+                            <em>救援保障</em>
+                            <span>途中意外，保证援助</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--品牌介绍-->
+        <div class="st-help">
+            <div class="wm-1200">
+                <div class="help-lsit">
+                    <dl>
+                        <dt>
+                            <a>预订常见问题</a>
+                        </dt>
+                        <dd>
+                                  
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>付款方式</a>
+                        </dt>
+                        <dd>
+                         
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>签订合同</a>
+                        </dt>
+                        <dd>
+                        
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>其它问题</a>
+                        </dt>
+                        <dd>
+                            <a>如何获取发票？</a>
+                            <a>预订酒店的问题</a>                              
+                        </dd>
+                    </dl>              
+                    <div class="st-wechat">
+                    </div>
+                </div>
+            </div>
+        </div><!--帮助 扫码-->
+        <div class="st-footer">
+            <div class="wm-1200">
+                <div class="st-foot-menu">
+                    <a>关于我们</a>
+                    <a>法律声明 </a>
+                    <a>联系我们</a>
+                    <a>隐私保护</a>
+                    <a>支付方式</a>
+                    <a>法律声明</a>          
+                </div><!--底部导航-->
+                <div class="st-foot-edit">
+                    <p>偶很快就会考虑</p>        
+                </div><!--网站底部介绍-->
+                <div class="support">技术支持：
+                    <a>思途CMS</a>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="st-sidemenu-box" style="height: 234px; right: 0px;">
+            <div class="st-sidemenu-con">
+                
+                <div class="st-sidemenu-bom">
+                    <div class="st-backTop" id="st-backTop">
+                        <a href="javascript:void(0)">TOP</a>
+                    </div>
+                    <div class="st-sidemenu-closed"></div>
+                </div>
+            </div>
+            <div class="st-travel-show" style="right: -100px;"></div>
+        </div>
+        <script>
+            getConsize();
+            $(function(){
+                $(window).resize(function(){
+                    getConsize()
+                });
+                //返回顶部
+                $('#st-backTop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});
+                //隐藏显示侧边导航
+                $('.st-sidemenu-closed').click(function(){
+                    $('.st-sidemenu-box').animate({right:'-35px'},100,function(){
+                        $('.st-travel-show').animate({right:'0'},200)
+                    })
+                })
+                $('.st-travel-show').click(function(){
+                    $(this).animate({right:'-100px'},100,function(){
+                        $('.st-sidemenu-box').animate({right:'0'},200)
+                    })
+                })
+            })
+            //动态获取改变窗口高度
+            function getConsize(){
+                $('.st-sidemenu-box').height($(window).height());
+            }
+        </script>
+        <div class="st-link">
+            <div class="wm-1200">
+                <div class="st-link-list">
+                    <dl>
+                        <dt>友情链接：</dt>
+                        <dd>
+                            <a>企排排</a>                   
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--友情链接-->  
+    </body>
+    <script>
+        $(function(){
+            //酒店首页焦点图
+            $('.st-hotel-slideBox').slide({mainCell:'.bd ul',easing:'easeOutCirc',autoPlay:true})
+            //酒店星级下拉选择
+            $('#input-select').click(function(){
+                var ul = $('.star-level-box');
+                if(ul.css("display")=="none"){
+                    $('#input-select').removeClass('up-ico').addClass('down-ico')
+                    ul.slideDown("fast");
+                }else{
+                    ul.slideUp("fast");
+                    $('#input-select').removeClass('down-ico').addClass('up-ico')
+                }
+            });
+            $(".star-level-box span").click(function(){
+                $('#input-select').removeClass('down-ico').addClass('up-ico')
+                var txt = $(this).text();
+                var rankid = $(this).attr('data-id');
+                $("#rankid").val(rankid);
+                $("#input-select").val(txt);
+                var value = $(this).attr("rel");
+                $(".star-level-box").hide();
+            });
+            //酒店预订时间选择
+            $("#txtHotelTime1").focus(function(){
+                $("#txtHotelTime2").attr('value','');
+                WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'%y-%M-%d',maxDate:'#F{$dp.$D(\'txtHotelTime2\',{d:-1});}',doubleCalendar:true,isShowClear:false,readOnly:true,errDealMode:1})
+                $("#txtHotelTime1").css("color","#333");
+                $("#txtHotelTime2").blur();
+            })
+            $("#txtHotelTime2").focus(function(){
+                WdatePicker({minDate:'#F{$dp.$D(\'txtHotelTime1\',{d:1});}',dateFmt:'yyyy-MM-dd',doubleCalendar:true,isShowClear:false,readOnly:true,errDealMode:1});
+                $("#txtHotelTime2").css("color","#333");
+                $("#txtHotelTime2").blur();
+            })
+        })
+        //酒店搜索目的地弹出框
+        function hSearchShow(){
+            $('.mdd-city-box').show()
+        }
+        function hSearchHide(){
+            $('.mdd-city-box').hide()
+        }
+    </script>
+</html>

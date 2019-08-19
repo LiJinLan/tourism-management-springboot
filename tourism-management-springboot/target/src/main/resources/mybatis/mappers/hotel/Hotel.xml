@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.HotelDao">
+	<insert id="addHotel" parameterType="Map" >
+		insert into hotel (id, name, province, city, address, originalPrice, salePrice, tradeVolume, satisfaction, recommend, homeType, bedType, mealSign, grade, openTime, decorateTime, payWay, introduce, telephone, hotelImage)
+		values (#{id}, #{name}, #{province}, #{city}, #{address}, #{originalPrice}, #{salePrice}, #{tradeVolume}, #{satisfaction}, #{recommend}, #{homeType}, #{bedType}, #{mealSign}, #{grade}, #{openTime}, #{decorateTime}, #{payWay}, #{introduce}, #{telephone}, #{hotelImage})
+	</insert>
+	
+	<insert id="addHotelFile" parameterType="Map" >
+		insert into hotel_file (id, hotelId, fileId) values (#{id},#{hotelId},#{fileId});
+	</insert>
+	
+	<select id="queryHotelByName" parameterType="String" resultType="Map">
+		select id, name, province, city, address, originalPrice, salePrice, tradeVolume, satisfaction, recommend, homeType, bedType, mealSign, grade, openTime, decorateTime, payWay, introduce, telephone, hotelImage
+		from hotel
+		where name =#{name}
+	</select>
+	<select id="queryHotelByNameCity" parameterType="Map" resultType="Map">
+		select id, name, province, city, address, originalPrice, salePrice, tradeVolume, satisfaction, recommend, homeType, bedType, mealSign, grade, openTime, decorateTime, payWay, introduce, telephone, hotelImage
+		from hotel
+		where name =#{name} and city =#{city}
+	</select>
+	<select id="queryHotelById" parameterType="String" resultType="Map">
+		select id, name, province, city, address, originalPrice, salePrice, tradeVolume, satisfaction, recommend, homeType, bedType, mealSign, grade, openTime, decorateTime, payWay, introduce, telephone, hotelImage
+		from hotel
+		where id =#{id}
+	</select>
+	<select id="queryHotelAll" resultType="Map">
+		select id, name, province, city, address, originalPrice, salePrice, tradeVolume, satisfaction, recommend, homeType, bedType, mealSign, grade, openTime, decorateTime, payWay, introduce, telephone, hotelImage
+		from hotel order by id desc
+	</select>
+	<select id="queryHotelFileByFileId" parameterType="String" resultType="Map">
+		select A.id, A.hotelId, A.fileId
+		from hotel_file A
+		where A.fileId=#{fileId}
+	</select>
+	
+	<select id="queryFilesByHotelId" parameterType="String" resultType="Map">
+		select B.id, B.name, B.filePath, B.fileDesc,A.hotelId
+		from hotel_file A inner join file B
+		on A.hotelId=#{hotelId} and A.fileId=B.id 
+	</select>
+	
+	<update id="updateHotel" parameterType="Map">
+		update hotel set name = #{name}, province = #{province}, city = #{city}, address = #{address}, originalPrice = #{originalPrice}, salePrice = #{salePrice}, tradeVolume = #{tradeVolume}, satisfaction = #{satisfaction}, recommend = #{recommend}, homeType = #{homeType}, bedType = #{bedType}, mealSign = #{mealSign}, grade = #{grade}, openTime = #{openTime}, decorateTime = #{decorateTime}, payWay = #{payWay}, introduce = #{introduce}, telephone = #{telephone}, hotelImage = #{hotelImage} where id = #{id}
+	</update>
+	
+	<update id="updateHotelFileById" parameterType="Map">
+		update hotel_file set hotelId= #{hotelId}, fileId = #{fileId} where id = #{id}
+	</update>
+	<delete id="deleteHotelById" parameterType="String">
+		delete from hotel where id =#{id}
+	</delete>
+</mapper>

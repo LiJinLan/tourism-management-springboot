@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>首页</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="../../../resources/lib/jquery/jquery-3.3.1.js"></script>
+		<link rel="stylesheet" type="text/css" href="../index/css/content.css">
+		<link rel="stylesheet" type="text/css" href="../index/css/nav.css">
+		<link rel="stylesheet" type="text/css" href="../index/font/iconfont.css">
+		<script type="text/javascript" src="../index/js/nav.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/scenicadd.css">
+		<script type="text/javascript" src="js/scenicadd.js"></script>
+		<script type="text/javascript" src="../../../resources/js/util.js"></script>
+		<script type="text/javascript" src="../../../resources/js/tool.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../../resources/lib/pnotify/pnotify.custom.min.css">
+		<script type="text/javascript" src="../../../resources/lib/pnotify/pnotify.custom.min.js"></script>
+		<script type="text/javascript" src="../../../resources/lib/pnotify/pnotifyFunc.js"></script>
+	</head>
+	<body>
+		<div class="nav">
+			<div class="nav-top">
+				<div id="mini"></div>
+			</div>
+			<ul class="menu">
+				
+			</ul>
+		</div>
+		<div class="right">
+			<div class="menu">
+				<div class="menu-left">
+					
+				</div>
+				<div class="menu-right">
+		
+				</div>
+			</div>
+			<div class="scenicadd">
+				<h3>当前位置：景点管理——> 景点添加</h3>
+				<div class="scenic">
+					<div class="scenic-left">
+						<div class="scenic-menu">
+							<p>景点名称：</p><input type="text" name="name">
+							<p>景点等级：</p>
+							<select name="grade" class="grade">
+								<option value="1">五星级 AAAAA</option>
+								<option value="2">四星级 AAAA</option>
+								<option value="3">三星级 AAA</option>
+								<option value="4">二星级 AA</option>
+								<option value="5">一星级 A</option>
+							</select>
+						</div>
+						<div class="scenic-menu">
+							<p>成人门票：</p><input type="text" name="adultTickets" placeholder="元/人">
+							<p>儿童门票：</p><input type="text" name="childTickets" placeholder="元/人">
+						</div>
+						<div class="scenic-menu">
+							<p>景点联系电话：</p><input type="text" name="telephone">
+							<p>所属城市：</p><input type="text" name="city">
+						</div>
+						<div class="scenic-menu">
+							<p>景点省份：</p><input type="text" name="address">
+							<p>景点推荐：</p>
+							<input  class="select" type="radio" checked="checked" name="recommend" value='推荐'/><label>推荐</label>
+							<input class="select" name="recommend" type="radio" value="不推荐"/><label>不推荐</label>
+						</div>	
+						<div class="introduce">
+							<p class="text">景点介绍：</p>								
+							<textarea rows="7" cols="90">
+							</textarea>
+						</div>
+					</div>
+					<div class="scenic-right">
+						<div class="file">
+							<input type="file" name="title-image" class="title-image" />
+						</div>
+						<button onclick="showImage();">显示图片</button>
+						<img src="" class="title-img" />
+					</div>
+				</div>
+				<div class="scenicImg">
+					<div class="scenic-images">
+						<button onclick="addImages();">增加图片</button>
+						<ul class="scenic-images-ul">
+							
+						</ul>
+					</div>
+					<button onclick="uploadImagesBtn();" class="upload-image-btn" disabled="disabled">一键上传图片</button>
+					<button onclick="add()" disabled="disabled" class="add-scenic-btn">添  加</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

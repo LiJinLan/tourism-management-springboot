@@ -1,0 +1,76 @@
+.user-cont-box .tabnav span {
+    float: left;
+    color: #333;
+    padding: 16px 60px;
+    font-size: 14px;
+    margin-right: -1px;
+    cursor: pointer;
+    border: 1px
+    solid #dcdcdc;
+    margin-bottom: 10px;
+}
+
+.user-order-box .tabnav span.on {
+    color: #fff;
+    border: 1px
+    solid #00b7ee;
+    border-bottom: 0;
+    background: #00b7ee;
+}
+
+
+.star-rating { 
+  width:306px;
+  height:34px;
+  
+}
+
+.star-rating ul{
+    float:left;
+}
+.star-rating ul input{
+    border:1px solid #0088d0;
+}
+
+.star-rating li{
+    float:left;
+    margin-left:10px;
+    font-size:16px;
+}
+
+.block button{
+    font-size: 16px;
+    width: 67px;
+    height: 34px;
+    background-color: #fb4734;
+    border-radius: 5px;
+    color: white
+}
+
+.starGrade {
+    width:500px;
+    height:30px;
+    
+}
+#star{
+    
+    float:left;
+    width:150px;
+    height:30px;
+}
+
+.hint {
+    width:250px;
+    height:30px;
+    float:left;
+    
+}
+
+#star{position:relative;width:600px;margin:20px auto;height:24px;}
+#star ul,#star span{float:left;display:inline;height:19px;line-height:19px;}
+#star ul{margin:0 10px;}
+#star li{float:left;width:24px;cursor:pointer;text-indent:-9999px;background:url(../../res/images/star.png) no-repeat;}
+#star strong{color:#f60;padding-left:10px;}
+#star li.on{background-position:0 -28px;}
+#star p{position:absolute;top:20px;width:159px;height:60px;display:none;background:url(../../res/images/icon.gif) no-repeat;padding:7px 10px 0;}
+#star p em{color:#f60;display:block;font-style:normal;}

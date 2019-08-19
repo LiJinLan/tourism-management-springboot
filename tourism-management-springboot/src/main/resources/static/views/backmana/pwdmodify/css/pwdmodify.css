@@ -1,0 +1,55 @@
+.modify {
+	float: left;
+	background-color: #39cd3c42;
+	width: 100%;
+	height: 89%;
+}
+
+.pwdmodify {
+    float: left;
+    width: 590px;
+    height: 378px;
+    margin-top: 80px;
+    margin-left: 200px;
+    background-color:#45adff45;
+    border: 1px solid blue;
+}
+
+.pwdmodify h2 {
+    margin-bottom: 34px;
+    margin-left: 200px;
+}
+
+.pwdmodify p {
+    font-size: 19px;
+    font-weight: 600;
+    margin-top: 30px;
+    color: #2200ff;
+    margin-left: 93px;
+}
+
+.pwdmodify input {
+    width: 196px;
+    font-size: 17px;
+    margin-left: 5px;
+    height: 29px;
+    color: black;
+}
+
+.pwdmodify p span {
+    width: 196px;
+    font-size: 20px;
+    margin-left: 10px;
+    height: 29px;
+    font-weight: 500;
+    color: black;
+}
+
+.pwdmodify button {
+    width: 115px;
+    font-size: 20px;
+    background-color: yellow;
+    height: 49px;
+    margin-top: 7px;
+    margin-left: 196px;
+}

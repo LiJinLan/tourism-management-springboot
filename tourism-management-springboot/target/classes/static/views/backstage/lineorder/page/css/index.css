@@ -1,0 +1,20 @@
+.pf {
+	color: #fff;
+    display: inline-block;
+    width: 75px;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    border-radius: 3px;
+    background: #ff9b3a;
+}
+
+
+.pf_grade li {
+	float:left;
+	margin-left:5px;
+	font-size:25px;
+	margin-top:40px;
+	background-color:red;
+}

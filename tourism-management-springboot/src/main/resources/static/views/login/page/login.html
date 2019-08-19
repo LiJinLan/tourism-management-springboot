@@ -1,0 +1,418 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <title>用户登陆-旅游1</title>
+        <script>
+            window.SITEURL = "/";
+            window.CURRENCY_SYMBOL="￥";
+        </script>    
+        <link type="text/css" href="./css/extend.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/header.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/footer.css" rel="stylesheet"  />
+        <link type="text/css" href="./css/layer.css" rel="stylesheet"  />
+        <link type="text/css" href="../../../../resources/lib/pnotify/pnotify.custom.min.css" rel="stylesheet"  />
+        
+        <script type="text/javascript" src="./js/jquery.md5.js"></script>
+        <script type="text/javascript" src="./js/layer.js"></script>
+        <script type="text/javascript" src="./js/SuperSlide.min.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/util.js"></script>
+        <script type="text/javascript" src="../../../../resources/lib/pnotify/pnotify.custom.min.js"></script>
+        <script type="text/javascript" src="../../../../resources/lib/pnotify/pnotifyFunc.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>  
+    </head>
+    <body>
+        <div class="web-top">
+            <div class="wm-1200">
+                <div class="notice-txt">
+                    <p>
+                        <span style="color: #808080">旅游管理系统网站：订购电话：7006-0999-27</span>
+                    </p>
+                </div>
+                <div class="scroll-order">
+                    <ul>
+                        <li>13551***2小时前评论了<a>九寨沟犀牛海</a></li>
+                        <li>13545***2小时前评论了<a>九寨沟星宇国际大酒店</a></li>
+                        <li>18682***9分钟前评论了<a>峨眉山乐山二日游</a></li>                   
+                    </ul>
+                </div>
+                <!-- <div class="top-login">
+                    <span id="loginstatus">
+                    </span>
+                    <a class="dd" href="/search/order"><i></i>订单查询</a>
+                    <dl class="dh">
+                        <dt><i></i>网站导航</dt>
+                        <dd>
+                          <a href="../../frontmana/lines/page/index.html">线路</a>
+                          <a href="../../frontmana/hotels/page/index.html">酒店</a>
+                          <a href="../../frontmana/scenic/page/index.html">景点</a>                       
+                        </dd>
+                    </dl>
+                </div> -->
+            </div>
+        </div><!--顶部-->
+        <div class="st-header">
+            <div class="wm-1200">
+                <div class="st-logo">
+                    <a href="/"></a>
+                </div>
+                <div class="st-top-search">
+                    <div class="st-search-down">
+                        <strong id="typename"><i></i></strong>
+                        <ul class="st-down-select searchmodel">
+                            <li data-id="0">全部</li>
+                            <li data-id="1" data-url="/lines/">线路</li>
+                            <li data-id="2" data-url="/hotels/">酒店</li>
+                            <li data-id="5" data-url="/spots/">景点</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="st-txt searchkeyword" placeholder="输入目的地、酒店、攻略" />
+                    <span>
+                                                 
+                    </span>
+                    <input type="button" value="搜索" class="st-btn" />
+                </div>
+                <div class="st-link-way">
+                    <strong>客服电话：</strong>
+                    <em>18757999962</em>
+                </div>
+            </div>
+        </div><!--header-->
+        <div class="st-nav">
+            <div class="wm-1200">
+                <div class="st-global">
+                    <div class="global-bt">旅游导航</div>
+                    <!-- <div class="global-list" style="display: none;">
+                        <div class="gl-list-tabbox">
+                            <h3>
+                                <strong><em></em><a href="" target="_blank">云南旅游</a></strong>
+                                <p>
+                                    <a href="" target="_blank">001</a>
+                                                              
+                                </p>
+                                <i class="arrow-rig"></i>
+                            </h3>
+                            <div class="tabcon-item">
+                                <div class="item-list">
+                                        <dl>
+                                            <dt><a href="" target="_blank">001</a></dt>
+                                            <dd>
+                                            </dd>
+                                        </dl>
+                                                              
+                                </div>
+                                <div class="ad-box">
+                                                                                          
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gl-list-tabbox">
+                            <h3>
+                                <strong><em></em><a href="" target="_blank">广东旅游</a></strong>
+                                <p>
+                                                                                      
+                                </p>
+                                <i class="arrow-rig"></i>
+                            </h3>
+                            <div class="tabcon-item">
+                                <div class="item-list">
+                                                                                      
+                                </div>
+                                <div class="ad-box">
+                                                                                          
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gl-list-tabbox">
+                            <h3>
+                                <strong><em></em><a href="" target="_blank">自定义</a></strong>
+                                <p>
+                                                                                      
+                                </p>
+                                <i class="arrow-rig"></i>
+                            </h3>
+                            <div class="tabcon-item">
+                                <div class="item-list">
+                                                                                      
+                                </div>
+                                <div class="ad-box">
+                                                                                          
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <script>
+                    $(function(){
+                        $('.gl-list-tabbox,.st-dh-con').hover(function(){
+                            $(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+                            $(this).children('h3').find('.arrow-rig').hide();
+                        },function(){
+                            $(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+                            $(this).children('h3').find('.arrow-rig').show();
+                        })
+                            $('.global-list').hide();
+                            $('.st-global').hoverDelay(function(){
+                                $('.global-list').show();
+                        },function(){
+                            $('.global-list').hide();
+                        })
+                    })
+                </script>
+                <div class="st-menu">
+                    <a href="../../frontmana/index/page/index.html">首页<s></s></a>
+                    <a href="../../frontmana/lines/page/index.html">线路<i class="st-new-ico"></i><s></s></a>
+                    <a href="../../frontmana/hotels/page/index.html">酒店</a>
+                    <a href="../../frontmana/scenic/page/index.html">景点<i class="st-hot-ico"></i><s></s></a>
+                </div>
+            </div>
+        </div><!--主导航--> 
+
+        <div class="st-userlogin-box">
+            <div class="st-login-wp">
+                <div class="st-admin-box">
+                    <form id="loginfrm" method="post">
+                        <div class="login-account-key">
+                            <ul>
+                                <li class="number">
+                                    <span class="tb"></span>
+                                    <input type="text" class="np-box" name="loginname" id="loginname"  placeholder="请输入登陆账号" />
+                                </li>
+                                <li class="password">
+                                    <span class="tb"></span>
+                                    <input type="password" class="np-box" name="loginpwd" id="loginpwd" placeholder="请输入登录密码" />
+                                </li>
+                                <li class="forget">
+                                    <span class="login_err"></span>
+                                    <!-- <a href="../findpwd/page/index.html">忘记密码？</a> -->
+                                </li>
+                                <li class="dl-btn">
+                                    <a href="javascript:;" class="userlogin" onclick="userlogin();">登 录</a>
+                                </li>
+                                <li class="now-zc">您还没有账号？
+                                    <a href="../../register/register.html">立刻注册</a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="logincode" id="frmcode" value="5823f82d5df9820fda0fa08476961901"/>
+                            <input type="hidden" name="fromurl" id="fromurl" value="http://demo368.wanziku.cn">
+                        </div>
+                    </form>
+                    <div class="other-login">
+                        <dl>
+                            <dt><span>使用其他方式登录</span><em></em></dt>
+                            <dd>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="st-brand">
+            <div class="wm-1200">
+                <div class="st-serve">
+                    <dl class="ico01 bor_0">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光价格</em>
+                            <span>同类产品，保证低价</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico02">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光行程</em>
+                            <span>品质护航，透明公开</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico03">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光服务</em>
+                            <span>专属客服，快速响应</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico04">
+                        <dt></dt>
+                        <dd>
+                            <em>救援保障</em>
+                            <span>途中意外，保证援助</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--品牌介绍-->
+        <div class="st-help">
+            <div class="wm-1200">
+                <div class="help-lsit">
+                    <dl>
+                        <dt>
+                            <a>预订常见问题</a>
+                        </dt>
+                        <dd>
+                                  
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>付款方式</a>
+                        </dt>
+                        <dd>
+                         
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>签订合同</a>
+                        </dt>
+                        <dd>
+                        
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a>其它问题</a>
+                        </dt>
+                        <dd>
+                            <a>如何获取发票？</a>
+                            <a>预订酒店的问题</a>                              
+                        </dd>
+                    </dl>              
+                    <div class="st-wechat">
+                    </div>
+                </div>
+            </div>
+        </div><!--帮助 扫码-->
+        <div class="st-footer">
+            <div class="wm-1200">
+                <div class="st-foot-menu">
+                    <a>关于我们</a>
+                    <a>法律声明 </a>
+                    <a>联系我们</a>
+                    <a>隐私保护</a>
+                    <a>支付方式</a>
+                    <a>法律声明</a>          
+                </div><!--底部导航-->
+                <div class="st-foot-edit">
+                    <p>偶很快就会考虑</p>        
+                </div><!--网站底部介绍-->
+                <div class="support">技术支持：
+                    <a>思途CMS</a>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="st-sidemenu-box" style="height: 234px; right: 0px;">
+            <div class="st-sidemenu-con">
+                <!-- <ul>
+                    <li class="myorder">
+                        <a href="/member/">我的订单</a>
+                    </li>
+                </ul> -->
+                <div class="st-sidemenu-bom">
+                    <div class="st-backTop" id="st-backTop">
+                        <a href="javascript:void(0)">TOP</a>
+                    </div>
+                    <div class="st-sidemenu-closed"></div>
+                </div>
+            </div>
+            <div class="st-travel-show" style="right: -100px;"></div>
+        </div>
+        <script>
+            getConsize();
+            $(function(){
+                $(window).resize(function(){
+                    getConsize()
+                });
+                //返回顶部
+                $('#st-backTop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});
+                //隐藏显示侧边导航
+                $('.st-sidemenu-closed').click(function(){
+                    $('.st-sidemenu-box').animate({right:'-35px'},100,function(){
+                        $('.st-travel-show').animate({right:'0'},200)
+                    })
+                })
+                $('.st-travel-show').click(function(){
+                    $(this).animate({right:'-100px'},100,function(){
+                        $('.st-sidemenu-box').animate({right:'0'},200)
+                    })
+                })
+            })
+            //动态获取改变窗口高度
+            function getConsize(){
+                $('.st-sidemenu-box').height($(window).height());
+            }
+        </script>
+        <script>
+            $(function(){
+                //登陆
+                $(".btn_login").click(function(){
+                    $("#loginfrm").submit();
+                })
+                $("#loginfrm").validate({
+                    rules: {
+                        loginname: {
+                            required: true
+                        },
+                        loginpwd: {
+                            required: true,
+                            minlength: 6
+                        }
+                    },
+                    messages: {
+                        loginname: {
+                            required: '用户名不能为空'
+                        },
+                        loginpwd: {
+                            required: '用户密码不能为空',
+                            minlength: '密码长度至少6位'
+                        }
+                    },
+                    errorPlacement: function (error, element) {
+                        var content = $('#loginfrm').find('.login_err:eq(0)').html();
+                        if (content == '') {
+                            $('#loginfrm').find('.login_err').html(error);
+                        }
+                    },
+                    showErrors: function (errorMap, errorList) {
+                        if (errorList.length < 1) {
+                            $('#loginfrm').find('.login_err:eq(0)').html('');
+                        } else {
+                            this.defaultShowErrors();
+                        }
+                    },
+                    submitHandler:function(form){
+                        var url = SITEURL+'member/login/ajax_login';
+                        var loginname = $("#loginname").val();
+                        var loginpwd = $.md5($("#loginpwd").val());
+                        var frmcode = $("#frmcode").val();
+                        $.ajax({
+                            type:"post",
+                            async: false,
+                            url:url,
+                            data:{loginname:loginname,loginpwd:loginpwd,frmcode:frmcode},
+                            dataType:'json',
+                            success: function(data){
+                                if(data.status == '1'){//登陆成功,跳转到来源网址
+                                    var url = $("#fromurl").val();
+                                    setTimeout(function(){window.open(url,'_self');},500);
+                                    $('body').append(data.js);//同步登陆js
+                                }
+                                else{
+                                    if(data.msg!=undefined){
+                                        $(".login_err").html(data.msg);
+                                    }else{
+                                        $(".login_err").html('用户名或者密码错误');
+                                    }
+                                }
+                            },
+                            error:function(a,b,c){
+                            }
+                        });
+                        return false;
+                    }
+                })
+            })
+        </script>
+    </body>
+</html>

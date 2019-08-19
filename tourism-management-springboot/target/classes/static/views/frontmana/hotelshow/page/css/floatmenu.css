@@ -1,0 +1,10 @@
+.fxd {
+   position: fixed;
+   top: 0;
+   z-index:999;
+ }
+ .section {
+  clear: both;
+  display: block;
+  overflow: hidden;
+ }

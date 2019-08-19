@@ -1,0 +1,110 @@
+.st-slideTab .st-tabnav .xl-bt {
+	margin-left:-5px;
+}
+
+.lineRecommendChoice{
+	width:650px;
+	height:190px;
+	top:50px;
+	left:250px;
+	z-index:9999;
+	position:absolute;
+	background-color:#f9f7f6;
+	border:1px solid #0088d0;
+	display:none;
+}
+
+.st-slideTab .hotelRecommendChoice { 
+	width: 628px;
+    height: 162px;
+    left: 250px;
+    float: left;
+    z-index: 9999;
+    margin-left: 115px;
+    position: absolute;
+    margin-top: 51px;
+    background-color: #f9f7f6;
+    border: 1px solid #0088d0;
+    display:none;
+    
+}
+
+.st-slideTab .scenicRecommendChoice { 
+	width: 628px;
+    height: 131px;
+    left: 250px;
+    float: left;
+    z-index: 9999;
+    margin-left: 49px;
+    position: absolute;
+    margin-top: 46px;
+    background-color: #f9f7f6;
+    border: 1px solid #0088d0;
+    display:none;
+    
+}
+
+.st-slideTab {
+	position: relative;
+}
+.st-slideTab .st-tabcon {
+    float: left;
+    position: absolute;
+    margin-top: 32px;
+}
+
+ .Recommend-div{
+	width:100%;
+	height:30px;
+	border-bottom:1px solid #0088d0;
+	font-size:13px;
+	line-height: 30px;
+}
+
+
+.Recommend-divLeft{
+	height:100%;
+	width:68px;
+	float:left;
+	margin-left: 7px;
+
+}
+
+.Recommend-divRight{
+	height:100%;
+	width:550px;
+	float:left;	
+}
+
+.Recommend-divRight input{
+	border:1px solid #0088d0;
+}
+
+.Recommend-divRight-ul{
+	float:left;
+	
+}
+
+.Recommend-divRight-ul li{
+	float:left;
+	margin-left:23px;
+}
+
+.queryButton{
+	margin-top:7px;
+    margin-left: 272px; 
+}
+
+.attr {
+	color: #7d7d7d;
+}
+
+.satisfaction {
+	font-size: 20px;
+    float: right;
+    color: #fb9125;
+}
+
+.lineTab{
+	margin-left:-75px;
+}

@@ -1,0 +1,564 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>线路预订-旅游1</title>
+        <script>
+            window.SITEURL = "/";
+            window.CURRENCY_SYMBOL="￥";
+        </script>    
+        <link type="text/css" href="./css/header.css" rel="stylesheet" /> 
+        <link type="text/css" href="./css/footer.css" rel="stylesheet" /> 
+        <link type="text/css" href="./css/extend.css" rel="stylesheet" /> 
+        <link type="text/css" href="./css/WdatePicker.css" rel="stylesheet" /> 
+        <link type="text/css" href="./css/layer.css" rel="stylesheet" /> 
+
+        <script type="text/javascript" src="./js/jquery.addcheck.js"></script> 
+        <script type="text/javascript" src="./js/SuperSlide.min.js"></script> 
+        <script type="text/javascript" src="./js/layer.js"></script> 
+        <script type="text/javascript" src="./js/WdatePicker.js"></script> 
+        <script type="text/javascript" src="../../../../resources/js/util.js"></script>
+        <script type="text/javascript" src="../../../../resources/js/user.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+        <script type="text/javascript" src="../../index/page/js/search.js"></script>
+    </head>
+    <body>
+        <div class="web-top"> 
+            <div class="wm-1200"> 
+                <div class="notice-txt">
+                    <p><span style="color: #808080">旅游管理系统网站：订购电话：7006-0999-27</span></p>
+                </div> 
+                <div class="scroll-order"> 
+                    <ul> 
+                        <li>13551***1小时前评论了<a href="javaScript:;" target="_blank">九寨沟犀牛海</a></li>
+                        <li>13545***2小时前评论了<a href="javaScript:;" target="_blank">九寨沟星宇国际大酒店</a></li>
+                        <li>18682***33分钟前评论了<a href="javaScript:;" target="_blank">峨眉山乐山二日游</a></li>
+                    </ul> 
+                </div> 
+                <div class="top-login"> 
+                    <span id="loginstatus"> </span> 
+                    <a class="dd" href="/search/order"><i></i>订单查询</a> 
+                    <dl class="dh"> 
+                        <dt>
+                            <i></i>网站导航
+                        </dt> 
+                        <dd> 
+                            <a href="../../lines/page/index.html">线路</a> 
+                           <a href="../../hotels/page/index.html">酒店</a> 
+                           <a href="../../scenic/page/index.html">景点</a> 
+                        </dd> 
+                    </dl> 
+                </div> 
+            </div> 
+        </div><!--顶部--> 
+        <div class="st-header"> 
+            <div class="wm-1200"> 
+                <div class="st-logo"> 
+                    <a href="/"></a> 
+                </div> 
+                <div class="st-top-search">
+                    <div class="st-search-down">
+                        <strong id="typename"><i></i></strong>
+                        <ul class="st-down-select searchmodel">
+                            <li data-id="0" data-url="all">全部</li>
+                            <li data-id="1" data-url="line">线路</li>
+                            <li data-id="2" data-url="hotel">酒店</li>
+                            <li data-id="5" data-url="scenic">景点</li>
+                        </ul>
+                    </div>
+                    <input type="text" class="st-txt searchkeyword" placeholder="输入目的地、名称、省份、城市" />
+                    <span>
+                                                 
+                    </span>
+                    <input type="button" onclick="searchKey();" value="搜索" class="st-btn" />
+                </div>
+                <div class="st-link-way"> 
+                    <strong>客服电话：</strong> 
+                    <em>18757999962</em> 
+                </div> 
+            </div> 
+        </div><!--header--> 
+        <div class="st-nav"> 
+            <div class="wm-1200"> 
+                <div class="st-global"> 
+                    <div class="global-bt">旅游导航</div> 
+                   <!--  <div class="global-list" style="display: none;"> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">云南旅游</a>
+                                </strong> 
+                                <p> 
+                                    <a href="" target="_blank">001</a> 
+                                </p><i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                    <dl> 
+                                        <dt>
+                                            <a href="" target="_blank">001</a>
+                                        </dt> 
+                                        <dd> 
+                                            <a href="">0012</a> 
+                                        </dd> 
+                                    </dl> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">广东旅游</a>
+                                </strong> 
+                                <p> 
+                                </p> 
+                                <i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                        <div class="gl-list-tabbox"> 
+                            <h3> 
+                                <strong><em></em>
+                                    <a href="" target="_blank">自定义</a>
+                                </strong> 
+                                <p> 
+                                </p> 
+                                <i class="arrow-rig"></i> 
+                            </h3> 
+                            <div class="tabcon-item"> 
+                                <div class="item-list"> 
+                                </div> 
+                                <div class="ad-box"> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>  -->
+                </div> 
+                <script>
+                    $(function(){
+                        $('.gl-list-tabbox,.st-dh-con').hover(function(){
+                            $(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+                            $(this).children('h3').find('.arrow-rig').hide();
+                        },function(){
+                            $(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+                            $(this).children('h3').find('.arrow-rig').show();
+                        })
+                        $('.global-list').hide();
+                        $('.st-global').hoverDelay(function(){
+                            $('.global-list').show();
+                        },function(){
+                            $('.global-list').hide();
+                        })
+                    })
+                </script> 
+                <div class="st-menu"> 
+                    <a href="../../index/page/index.html">首页<s></s></a> 
+                    <a href="../../lines/page/index.html">线路 <i class="st-new-ico"></i><s></s> </a> 
+                    <a href="../../hotels/page/index.html">酒店 </a> 
+                    <a href="../../scenic/page/index.html">景点 <i class="st-hot-ico"></i><s></s> </a> 
+                </div> 
+            </div> 
+        </div><!--主导航--> 
+        <script>
+            var SITEURL = "/";
+            $(function(){
+                $(".searchmodel li").click(function(){
+                    var typeid = $(this).attr('data-id');
+                    var durl = $(this).attr('data-url');
+                    var typename = $(this).text();
+                    $("#typename").html(typename+'<i></i>');
+                    $("#typename").attr('data-id',typeid);
+                    $("#typename").attr('data-url',durl);
+                })
+                $(".searchmodel li:first").trigger('click');
+                //search
+                $('.st-btn').click(function(){
+                    return true;
+                })
+                //导航的选中状态
+                $(".st-menu a").each(function(){
+                    var url= window.location.href;
+                    url=url.replace('index.php','');
+                    url=url.replace('index.html','');
+                    var ulink=$(this).attr("href");
+                    if(url==ulink)
+                    {
+                        $(this).addClass('active');
+                    }
+                })
+            })
+        </script>
+
+        <div class="big">
+            <div class="wm-1200">
+                <div class="st-guide">
+                    <a href="../../index/page/index.html">首页</a>&nbsp;&nbsp;&gt;&nbsp;&nbsp;景点        
+                </div><!--面包屑-->
+                <div class="st-main-page">
+                    <form id="orderfrm">
+                        <div class="con-order-box">
+                            <div class="product-msg">
+                                <h3 class="pm-tit"><strong class="ico01">预定信息</strong></h3>
+                                <dl class="pm-list name">
+
+                                </dl>
+                                <dl class="pm-list child">
+
+                                </dl>
+                                <dl class="pm-list sale">
+
+                                </dl>
+                                <div class="table-msg">
+                                    <table width="100%" border="0" class="people_info">
+                                        <tr>
+                                          <th width="33%" height="40" scope="col"><span class="l-con">使用日期</span></th>
+                                          <th width="33%" scope="col">购买数量</th>
+                                          <th width="33%" scope="col">总价格</th>
+                                        </tr>
+                                        <tr>
+                                            <td height="40">
+                                                <span><span class="st-star-ico">*</span> <input type="text" class="inputdate" name="usedate" placeholder="yyyy-MM-DD"/></span>
+                                            </td>
+                                            <td>
+                                                <div class="control-box">
+                                                    <span class="add-btn">-</span>
+                                                    <input type="text" id="dingnum" name="dingnum" class="number-text" value="1"/>
+                                                    <span class="sub-btn">+</span>
+                                                </div>
+                                            </td>
+                                            <td><span class="price totalprice"><i class="currency_sy">￥</i></span></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div><!--预定信息-->
+                            <div class="product-msg">
+                                <h3 class="pm-tit">
+                                    <strong class="ico02">联系人信息</strong>
+                                </h3>
+                                <dl class="pm-list">
+                                    <dt><span class="st-star-ico">*</span>联系人：</dt>
+                                    <dd><input type="text" class="linkman-text" name="linkman" value="" /><span class="st-ts-text hide"></span></dd>
+                                </dl>
+                                <dl class="pm-list">
+                                    <dt><span class="st-star-ico">*</span>手机号码：</dt>
+                                    <dd>
+                                        <input type="text" class="linkman-text" name="linktel" value="" />
+                                        <span class="st-ts-text hide"></span>
+                                    </dd>
+                                </dl>
+                                <dl class="pm-list">
+                                    <dt>电子邮箱：</dt>
+                                      <dd>
+                                        <input type="text" class="linkman-text" name="linkemail" />
+                                    </dd>
+                                </dl>
+                                <dl class="pm-list">
+                                    <dt>订单留言：</dt>
+                                    <dd>
+                                        <textarea class="order-remarks" name="remark" cols="" rows=""></textarea>
+                                    </dd>
+                                </dl>
+                            </div><!--联系人信息-->
+                            <div class="product-msg">
+                                <h3 class="pm-tit"><strong class="ico08">积分优惠</strong></h3>
+                                <div class="jf">
+                                    <span><em>积分抵现</em><b><i class="currency_sy">￥</i>5</b></span>
+                                    <span><em>预订送分</em><b>10</b></span>
+                                    <span><em>评论送分</em><b>2</b></span>
+                                </div>
+                                <dl class="pm-list">
+                                    <dt>订单总额：</dt>
+                                    <dd>
+                                        <span class="zj totalprice"></span>
+                                    </dd>
+                                </dl><!--用户为登陆状态,此套餐积分抵现金额不为0,-->
+                            </div><!--积分优惠-->
+                            <div class="order-js-box">
+                                <div class="total">订单结算总额：
+                                    <span class="totalprice"></span>
+                                </div>
+                                <div class="yz">
+                                    <input type="button" class="tj-btn" value="提交订单" onclick="myorderSubmit();" />
+                                </div>
+                            </div><!--提交订单-->
+                        </div><!--订单内容-->
+                        <input type="hidden" name="productid" value="1"/>
+                        <input type="hidden" name="webid" value="0"/>
+                        <input type="hidden" name="frmcode" value="36062d3e7d8116c77358e402a8ca52e0"><!--安全校验码-->
+                        <input type="hidden" name="usejifen" id="usejifen" value="0"/><!--是否使用积分-->
+                        <input type="hidden" class="sale-price" id="price" />
+                        <input type="hidden" id="jifentprice" value=""><!--积分抵现金额-->
+                        <input type="hidden" name="suitid" id="suitid" value="1"/>
+                        <input type="hidden" id="total_price" value=""/><!--隐藏域-->
+                    </form>
+                    <div class="st-sidebox">
+                        <div class="side-order-box">
+                            <div class="order-total-tit">结算信息</div>
+                            <div class="show-con">
+                                <ul class="ul-cp">
+                                      
+                                </ul>
+                                <ul class="ul-list">
+                                    <li>使用日期：<span class="usedate">2018-11-11</span></li>
+                                    <li>数量：<span class="dingnum">1</span></li>
+                                </ul>
+                                <div class="total-price">订单总额：
+                                    <span class="totalprice"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--订单结算信息-->
+                </div>
+            </div>
+        </div>
+        
+        <div class="st-brand">
+            <div class="wm-1200">
+                <div class="st-serve">
+                    <dl class="ico01 bor_0">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光价格</em>
+                            <span>同类产品，保证低价</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico02">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光行程</em>
+                            <span>品质护航，透明公开</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico03">
+                        <dt></dt>
+                        <dd>
+                            <em>阳光服务</em>
+                            <span>专属客服，快速响应</span>
+                        </dd>
+                    </dl>
+                    <dl class="ico04">
+                        <dt></dt>
+                        <dd>
+                            <em>救援保障</em>
+                            <span>途中意外，保证援助</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div><!--品牌介绍-->
+        <div class="st-help">
+            <div class="wm-1200">
+                <div class="help-lsit">
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_9.html" rel="nofollow">预订常见问题</a>
+                        </dt>
+                        <dd>
+                                  
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_10.html" rel="nofollow">付款方式</a>
+                        </dt>
+                        <dd>
+                         
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_11.html" rel="nofollow">签订合同</a>
+                        </dt>
+                        <dd>
+                        
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>
+                            <a href="http://demo368.wanziku.cn/help/index_12.html" rel="nofollow">其它问题</a>
+                        </dt>
+                        <dd>
+                            <a href="/help/show_43.html" rel="nofollow">如何获取发票？</a>
+                            <a href="/help/show_16.html" rel="nofollow">预订酒店的问题</a>                              
+                        </dd>
+                    </dl>              
+                    <div class="st-wechat">
+                    </div>
+                </div>
+            </div>
+        </div><!--帮助 扫码-->
+        <div class="st-footer">
+            <div class="wm-1200">
+                <div class="st-foot-menu">
+                    <a href="http://demo368.wanziku.cn/servers/index_1.html"  target="_blank" rel="nofollow">关于我们</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_1.html"  target="_blank" rel="nofollow">法律声明 </a>
+                    <a href="http://demo368.wanziku.cn/servers/index_2.html"  target="_blank" rel="nofollow">联系我们</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_10.html"  target="_blank" rel="nofollow">隐私保护</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_4.html"  target="_blank" rel="nofollow">支付方式</a>
+                    <a href="http://demo368.wanziku.cn/servers/index_7.html"  target="_blank" rel="nofollow">法律声明</a>          
+                </div><!--底部导航-->
+                <div class="st-foot-edit">
+                    <p>偶很快就会考虑</p>        
+                </div><!--网站底部介绍-->
+                <div class="support">技术支持：
+                    <a href="http://www.stourweb.com/" target="_blank">思途CMS</a>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        <div class="st-sidemenu-box" style="height: 234px; right: 0px;">
+            <div class="st-sidemenu-con">
+                <ul>
+                    <li class="myorder">
+                        <a href="/member/">我的订单</a>
+                    </li>
+                </ul>
+                <div class="st-sidemenu-bom">
+                    <div class="st-backTop" id="st-backTop">
+                        <a href="javascript:void(0)">TOP</a>
+                    </div>
+                    <div class="st-sidemenu-closed"></div>
+                </div>
+            </div>
+            <div class="st-travel-show" style="right: -100px;"></div>
+        </div>
+        <script>
+            getConsize();
+            $(function(){
+                $(window).resize(function(){
+                    getConsize()
+                });
+                //返回顶部
+                $('#st-backTop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});
+                //隐藏显示侧边导航
+                $('.st-sidemenu-closed').click(function(){
+                    $('.st-sidemenu-box').animate({right:'-35px'},100,function(){
+                        $('.st-travel-show').animate({right:'0'},200)
+                    })
+                })
+                $('.st-travel-show').click(function(){
+                    $(this).animate({right:'-100px'},100,function(){
+                        $('.st-sidemenu-box').animate({right:'0'},200)
+                    })
+                })
+            })
+            //动态获取改变窗口高度
+            function getConsize(){
+                $('.st-sidemenu-box').height($(window).height());
+            }
+        </script>
+        <div id="calendar"></div>
+        <script>
+            $(function(){
+                get_total_price();
+                //出发日期选择
+                $(".inputdate").focus(function(){
+                    WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'%y-%M-%d',doubleCalendar:false,isShowClear:false,readOnly:true,errDealMode:1,onpicked:function(){
+                        $('.usedate').html($('.inputdate').val())
+                    }})
+                })
+                //提交订单
+                $('.tj-btn').click(function(){
+                    
+                })
+                //表单验证
+                $("#orderfrm").validate({
+                    submitHandler:function(form){
+                        
+                    } ,
+                    errorClass:'st-ts-text',
+                    errorElement:'span',
+                    rules: {
+                        linkman:{
+                            required: true
+                        },
+                        linktel:{
+                            required:true,
+                            isPhone:true
+                        }
+                    },
+                    messages: {
+                        linkman:{
+                            required: "请填写联系人信息"
+                        },
+                        linktel:{
+                            required: "请填写联系方式"
+                        },
+                        checkcode:{
+                            required: "",
+                            remote: ""
+                        }
+                    },
+                    highlight: function(element, errorClass, validClass) {
+                        $(element).attr('style','border:1px solid red');
+                    },
+                    unhighlight:function(element, errorClass){
+                        $(element).attr('style','');
+                    }
+                });
+                //数量减少
+                $(".control-box").find('.add-btn').click(function(){
+                   var obj = $(this).parent().find('.number-text');
+                   var cur = Number(obj.val());
+                   if(cur>1){
+                       cur = cur-1;
+                       obj.val(cur);
+                   }
+                    $('.dingnum').html(cur);
+                    get_total_price();
+                })
+                //数量添加
+                $(".control-box").find('.sub-btn').click(function(){
+                    var obj = $(this).parent().find('.number-text');
+                    var cur = Number(obj.val());
+                    cur++;
+                    obj.val(cur);
+                    $('.dingnum').html(cur);
+                    get_total_price();
+                })
+                //使用积分抵现
+                $('.use-jf span i').click(function(){
+                    var totalprice = Number($("#total_price").val());
+                    if($('.use-jf span i').attr('class')!='on'){
+                        var jifentprice = Number($("#jifentprice").val());
+                        if(jifentprice > totalprice){
+                            layer.alert('该产品价格低于单位积分抵现金额，不能抵现！',{
+                                icon:5
+                            })
+                            return false;
+                        }
+                    }
+                    $(this).toggleClass('on');
+                    get_total_price();
+                })
+            })
+            //检测库存
+            function check_storage() {
+                return true;
+            }
+            //获取总价
+            function get_total_price(){
+                var price = Number($("#price").val());
+                var dingnum = Number($("#dingnum").val());
+                var jifentprice = 0;
+                //是否使用积分
+                if($('.use-jf span i').attr('class')=='on'){
+                    jifentprice = $("#jifentprice").val();
+                    $("#usejifen").val(1);
+                }else{
+                    $("#usejifen").val(0);
+                }
+               price = price * dingnum - jifentprice;
+               $("#total_price").val(price);
+               $(".totalprice").html('<i class="currency_sy">￥</i>'+price);
+            }
+        </script>
+    </body>
+</html>

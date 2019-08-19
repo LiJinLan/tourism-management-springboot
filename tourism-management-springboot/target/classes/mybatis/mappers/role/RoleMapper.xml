@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.RoleDao">
+	<insert id="addRole" parameterType="Map" >
+		insert into role (id, name)
+		values (#{id}, #{name})
+	</insert>
+	<select id="queryRoleName" parameterType="String" resultType="Map">
+		select id, name
+		from role
+		where name =#{name}
+	</select>
+	<select id="queryRoleByRole" parameterType="String" resultType="Map">
+		select id, name
+		from role
+		where id =#{roleId}
+	</select>
+	<select id="queryRoleAll" resultType="Map">
+		select id, name
+		from role
+	</select>
+	<update id="updateRole" parameterType="Map">
+		update role set name = #{name} where id = #{id}
+	</update>
+	<delete id="deleteRoleById" parameterType="String">
+		delete from role where id =#{id}
+	</delete>
+</mapper>

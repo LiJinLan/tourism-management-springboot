@@ -1,0 +1,425 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>会员注册-旅游1</title>
+    <script>
+      window.SITEURL = "/";
+      window.CURRENCY_SYMBOL="￥";
+    </script>    
+    <link type="text/css" href="./css/extend.css" rel="stylesheet"  />
+    <link type="text/css" href="./css/header.css" rel="stylesheet"  />
+    <link type="text/css" href="./css/footer.css" rel="stylesheet"  />
+    <link type="text/css" href="./css/layer.css" rel="stylesheet"  />
+    <script type="text/javascript" src="./js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="./js/layer.js"></script>
+    <script type="text/javascript" src="./js/SuperSlide.min.js"></script>
+    <script type="text/javascript" src="../../../../resources/js/util.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+</head>
+<body>
+<div class="web-top">
+    <div class="wm-1200">
+        <div class="notice-txt"><p><span style="color: #808080">四川门户电子商务网站系统，用于快速建设旅游网站：订购网站<a href="http://www.stourweb.com">www.stourweb.com</a>，电话：4006-0999-27</span></p></div>
+        <div class="scroll-order">
+            <ul>
+                                                       <li>13551***1小时前评论了<a href="http://demo368.wanziku.cn/spots/show_3.html" target="_blank">九寨沟犀牛海</a></li>
+                                       <li>13545***22分钟前评论了<a href="http://demo368.wanziku.cn/hotels/show_2.html" target="_blank">九寨沟星宇国际大酒店</a></li>
+                                       <li>18682***3小时前评论了<a href="http://demo368.wanziku.cn/lines/show_2.html" target="_blank">峨眉山乐山二日游</a></li>
+                                  
+            </ul>
+        </div>
+        <div class="top-login">
+            <span id="loginstatus">
+            </span>
+            <a class="dd" href="/search/order"><i></i>订单查询</a>
+            <dl class="dh">
+                <dt><i></i>网站导航</dt>
+                <dd>                                            
+                  <a href="../../frontmana/lines/page/index.html">线路</a>
+                  <a href="../../frontmana/hotels/page/index.html">酒店</a>
+                  <a href="../../frontmana/scenic/page/index.html">景点</a>                     
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div><!--顶部-->
+<div class="st-header">
+    <div class="wm-1200">
+        <div class="st-logo">
+                        <a href="/"></a>
+                    </div>
+        <div class="st-top-search">
+            <div class="st-search-down">
+                <strong id="typename"><i></i></strong>
+                <ul class="st-down-select searchmodel">
+                    <li data-id="0">全部</li>
+                                            <li data-id="1" data-url="/lines/">线路</li>
+                                            <li data-id="2" data-url="/hotels/">酒店</li>
+                                            <li data-id="5" data-url="/spots/">景点</li>
+                                    </ul>
+            </div>
+            <input type="text" class="st-txt searchkeyword" placeholder="输入目的地、酒店、攻略" />
+        <span>
+                                     
+        </span>
+            <input type="button" value="搜索" class="st-btn" />
+        </div>
+        <div class="st-link-way">
+            <strong>客服电话：</strong>
+            <em>18757999962</em>
+        </div>
+    </div>
+</div><!--header-->
+<div class="st-nav">
+    <div class="wm-1200">
+        <div class="st-global">
+<div class="global-bt">旅游导航</div>
+ <div class="global-list" style="display: none;">
+                            <div class="gl-list-tabbox">
+                <h3>
+                    <strong><em></em><a href="" target="_blank">云南旅游</a></strong>
+                    <p>
+                                                                             <a href="" target="_blank">001</a>
+                                                  
+                    </p>
+                    <i class="arrow-rig"></i>
+                </h3>
+                <div class="tabcon-item">
+                    <div class="item-list">
+                                                                                <dl>
+                                <dt><a href="" target="_blank">001</a></dt>
+                                <dd>
+                                                                                                                 <a href="">0012</a>
+                                                                         
+                                </dd>
+                            </dl>
+                                                  
+                    </div>
+                    <div class="ad-box">
+                                                                              
+                    </div>
+                </div>
+            </div>
+                              <div class="gl-list-tabbox">
+                <h3>
+                    <strong><em></em><a href="" target="_blank">广东旅游</a></strong>
+                    <p>
+                                                                          
+                    </p>
+                    <i class="arrow-rig"></i>
+                </h3>
+                <div class="tabcon-item">
+                    <div class="item-list">
+                                                                          
+                    </div>
+                    <div class="ad-box">
+                                                                              
+                    </div>
+                </div>
+            </div>
+                              <div class="gl-list-tabbox">
+                <h3>
+                    <strong><em></em><a href="" target="_blank">自定义</a></strong>
+                    <p>
+                                                                          
+                    </p>
+                    <i class="arrow-rig"></i>
+                </h3>
+                <div class="tabcon-item">
+                    <div class="item-list">
+                                                                          
+                    </div>
+                    <div class="ad-box">
+                                                                              
+                    </div>
+                </div>
+            </div>
+                  </div>
+ </div>
+<script>
+    $(function(){
+        $('.gl-list-tabbox,.st-dh-con').hover(function(){
+            $(this).children('h3').addClass('hover').next('.tabcon-item,.st-dh-item').show();
+            $(this).children('h3').find('.arrow-rig').hide();
+        },function(){
+            $(this).children('h3').removeClass('hover').next('.tabcon-item,.st-dh-item').hide();
+            $(this).children('h3').find('.arrow-rig').show();
+        })
+                    $('.global-list').hide();
+            $('.st-global').hoverDelay(function(){
+                $('.global-list').show();
+            },function(){
+                $('.global-list').hide();
+            })
+            })
+</script>
+        <div class="st-menu">
+          <a href="../../frontmana/index/page/index.html">首页<s></s></a>
+          <a href="../../frontmana/lines/page/index.html">线路<i class="st-new-ico"></i><s></s></a>
+          <a href="../../frontmana/hotels/page/index.html">酒店</a>
+          <a href="../../frontmana/scenic/page/index.html">景点<i class="st-hot-ico"></i><s></s></a>         
+        </div>
+    </div>
+</div><!--主导航-->
+<script>
+    var SITEURL = "/";
+    $(function(){
+        $(".searchmodel li").click(function(){
+            var typeid = $(this).attr('data-id');
+            var durl = $(this).attr('data-url');
+            var typename = $(this).text();
+            $("#typename").html(typename+'<i></i>');
+            $("#typename").attr('data-id',typeid);
+            $("#typename").attr('data-url',durl);
+        })
+        $(".searchmodel li:first").trigger('click');
+        //search
+        $('.st-btn').click(function(){
+            var keyword = $('.searchkeyword').val();
+            if(keyword == ''){
+                $('.searchkeyword').focus();
+                return false;
+            }
+            var typeid = $("#typename").attr('data-id');
+            var durl = $("#typename").attr('data-url');
+            if(typeid==0 || typeid==8){
+                var url = SITEURL+'search/cloudsearch?keyword='+encodeURIComponent(keyword)+"&typeid="+typeid;
+            }else{
+                var url = "http://demo368.wanziku.cn"+durl+'all?keyword='+encodeURIComponent(keyword);
+            }
+            location.href = url;
+        })
+        //导航的选中状态
+        $(".st-menu a").each(function(){
+            var url= window.location.href;
+            url=url.replace('index.php','');
+            url=url.replace('index.html','');
+            var ulink=$(this).attr("href");
+            if(url==ulink)
+            {
+                $(this).addClass('active');
+            }
+        })
+    })
+</script>  <div class="st-userlogin-box">
+    <div class="st-login-wp">
+    <div class="st-reg-box">
+      <div class="reg-tabnav">
+        <span class="on" data-type="phone">手机注册</span>
+            <i></i>
+            <span data-type="email">邮箱注册</span>
+        </div>
+            <script>
+                $(function(){
+                    $('.reg-tabnav span').click(function(){
+                        $(this).addClass('on').siblings().removeClass('on');
+                        var frm = $(this).attr('data-type');
+                        $(".reg-cont-box").find('ul').hide();
+                        $('#'+frm+'_reg').show();
+                        $('#regfrm').val(frm+'frm');
+                    })
+                })
+            </script>
+      <div class="reg-cont-box">
+           <form id="phonefrm" method="post" action="/member/register/doreg">
+        <ul id="phone_reg">
+          <li>
+              <span class="bt-sp">登录帐号</span>
+              <input type="text" class="reg-text w230" id="mobile" name="mobile" placeholder="请输入手机号" />
+              <span class="msg_contain"></span>
+            </li>
+                <li>
+                  <span class="bt-sp">验证码</span>
+                  <input type="text" class="reg-text w105" id="p_checkcode" name="p_checkcode" />
+                  <span class="reg-yzm"><img src="http://demo368.wanziku.cn/captcha" width="114" height="31" onClick="this.src=this.src+'?math='+ Math.random()" /></span>
+                  <span class="reg-change"><a href="javascript:;">换一张</a></span>
+                  <span class="msg_contain"></span>
+                </li>
+                      <li>
+            <span class="bt-sp">密码</span>
+              <input type="password" name="password1" id="password1" class="reg-text w230" placeholder="请输入登录密码" />
+                <span class="msg_contain"></span>
+                <span class="complex_contain"></span>
+            </li>
+          <li>
+            <span class="bt-sp">确认密码</span>
+              <input type="password" name="password2" id="password2" class="reg-text w230" placeholder="请输入登录密码" />
+                <span class="msg_contain"></span>
+            </li>
+          </ul>
+               <input type="hidden" name="frmcode" value="585a328ecbb3275e4529743e70ed963b"/>
+               <input type="hidden" name="regtype" value="phone"/>
+             </form>
+            <!--邮箱登陆-->
+           <form id="emailfrm" method="post" action="/member/register/doreg">
+        <ul id="email_reg" style="display: none">
+          <li>
+            <span class="bt-sp">登录帐号</span>
+              <input type="text" class="reg-text w230" id="email" name="email" placeholder="请输入邮箱帐号" />
+                <span class="msg_contain"></span>
+            </li>
+                <li>
+                    <span class="bt-sp">验证码</span>
+                    <input type="text" class="reg-text w105" id="e_checkcode" name="e_checkcode" />
+                    <span class="reg-yzm"><img src="http://demo368.wanziku.cn/captcha" onClick="this.src=this.src+'?math='+ Math.random()" width="114" height="31" /></span>
+                    <span class="reg-change"><a href="javascript:;">换一张</a></span>
+                    <span class="msg_contain"></span>
+                </li>
+                                <li>
+                   <span class="bt-sp">密码</span>
+                  <input type="password" class="reg-text w230" name="e_password1" id="e_password1" placeholder="请输入登录密码" />
+                    <span class="msg_contain"></span>
+                    <span class="complex_contain"></span>
+                </li>
+                <li>
+                    <span class="bt-sp">确认密码</span>
+                    <input type="password" name="e_password2" id="e_password2" class="reg-text w230" placeholder="请输入登录密码" />
+                    <span class="msg_contain"></span>
+                </li>
+                <input type="hidden" name="frmcode" value="585a328ecbb3275e4529743e70ed963b"/>
+                <input type="hidden" name="regtype" value="email"/>
+          </ul>
+           </form>
+          <div class="now-reg-btn"><a href="javascript:;">立即注册</a></div>
+        </div>
+        <div class="reg-tig-box">
+          <p>已有账号，<a href="../../login/page/login.html">立即登录</a></p>
+          <dl>
+            <dt>使用其他方式登录</dt>
+            <dd>
+                                                            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+ <input type="hidden" id="regfrm" value="phonefrm"/>
+ <input type="hidden" id="backurl" value="http://demo368.wanziku.cn/member/"/>
+ 
+<div class="st-brand">
+    <div class="wm-1200">
+        <div class="st-serve">
+            <dl class="ico01 bor_0">
+                <dt></dt>
+                <dd>
+                    <em>阳光价格</em>
+                    <span>同类产品，保证低价</span>
+                </dd>
+            </dl>
+            <dl class="ico02">
+                <dt></dt>
+                <dd>
+                    <em>阳光行程</em>
+                    <span>品质护航，透明公开</span>
+                </dd>
+            </dl>
+            <dl class="ico03">
+                <dt></dt>
+                <dd>
+                    <em>阳光服务</em>
+                    <span>专属客服，快速响应</span>
+                </dd>
+            </dl>
+            <dl class="ico04">
+                <dt></dt>
+                <dd>
+                    <em>救援保障</em>
+                    <span>途中意外，保证援助</span>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div><!--品牌介绍-->
+<div class="st-help">
+    <div class="wm-1200">
+        <div class="help-lsit">
+                                                <dl>
+                        <dt><a href="http://demo368.wanziku.cn/help/index_9.html" rel="nofollow">预订常见问题</a></dt>
+                        <dd>
+                                                                                          <a href="/help/show_47.html" rel="nofollow">如何办理护照</a>
+                                                          
+                        </dd>
+                    </dl>
+                                    <dl>
+                        <dt><a href="http://demo368.wanziku.cn/help/index_10.html" rel="nofollow">付款方式</a></dt>
+                        <dd>
+                                                                                          <a href="/help/show_7.html" rel="nofollow">本地游客如何付款？</a>
+                                                          
+                        </dd>
+                    </dl>
+                                    <dl>
+                        <dt><a href="http://demo368.wanziku.cn/help/index_11.html" rel="nofollow">签订合同</a></dt>
+                        <dd>
+                                                                                          <a href="/help/show_29.html" rel="nofollow">关于旅游合同问题解答</a>
+                                                          
+                        </dd>
+                    </dl>
+                                    <dl>
+                        <dt><a href="http://demo368.wanziku.cn/help/index_12.html" rel="nofollow">其它问题</a></dt>
+                        <dd>
+                                                                                          <a href="/help/show_43.html" rel="nofollow">如何获取发票？</a>
+                                                              <a href="/help/show_16.html" rel="nofollow">预订酒店的问题</a>
+                                                          
+                        </dd>
+                    </dl>
+                            
+            <div class="st-wechat">
+                            </div>
+        </div>
+    </div>
+</div><!--帮助 扫码--><div class="st-footer">
+    <div class="wm-1200">
+        <div class="st-foot-menu">
+                                    <a href="http://demo368.wanziku.cn/servers/index_1.html"  target="_blank" rel="nofollow">关于我们</a>
+                         <a href="http://demo368.wanziku.cn/servers/index_1.html"  target="_blank" rel="nofollow">法律声明 </a>
+                         <a href="http://demo368.wanziku.cn/servers/index_2.html"  target="_blank" rel="nofollow">联系我们</a>
+                         <a href="http://demo368.wanziku.cn/servers/index_10.html"  target="_blank" rel="nofollow">隐私保护</a>
+                         <a href="http://demo368.wanziku.cn/servers/index_4.html"  target="_blank" rel="nofollow">支付方式</a>
+                         <a href="http://demo368.wanziku.cn/servers/index_7.html"  target="_blank" rel="nofollow">法律声明</a>
+                       
+        </div><!--底部导航-->
+        <div class="st-foot-edit">
+            <p>偶很快就会考虑</p>        </div><!--网站底部介绍-->
+        <div class="support">技术支持：<a href="http://www.stourweb.com/" target="_blank">思途CMS</a></div>
+        <p></p>
+    </div>
+</div>
+<div class="st-sidemenu-box" style="height: 234px; right: 0px;">
+    <div class="st-sidemenu-con">
+        <ul>
+                                    <li class="myorder"><a href="/member/">我的订单</a></li>
+        </ul>
+        <div class="st-sidemenu-bom">
+            <div class="st-backTop" id="st-backTop"><a href="javascript:void(0)">TOP</a></div>
+            <div class="st-sidemenu-closed"></div>
+        </div>
+    </div>
+    <div class="st-travel-show" style="right: -100px;"></div>
+</div>
+<script>
+    getConsize();
+    $(function(){
+        $(window).resize(function(){
+            getConsize()
+        });
+        //返回顶部
+        $('#st-backTop').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});
+        //隐藏显示侧边导航
+        $('.st-sidemenu-closed').click(function(){
+            $('.st-sidemenu-box').animate({right:'-35px'},100,function(){
+                $('.st-travel-show').animate({right:'0'},200)
+            })
+        })
+        $('.st-travel-show').click(function(){
+            $(this).animate({right:'-100px'},100,function(){
+                $('.st-sidemenu-box').animate({right:'0'},200)
+            })
+        })
+    })
+        //动态获取改变窗口高度
+        function getConsize(){
+            $('.st-sidemenu-box').height($(window).height());
+        }
+</script></body>
+</html>

@@ -1,0 +1,74 @@
+.nav-item>a {
+    width: 100%!important;
+}
+
+.nav-item a {
+    width: 100%!important;
+    text-decoration: none!important;
+}
+
+.nav-item a span { 
+    display: inline-block!important;
+}
+
+.nav-item li:hover a {
+    width: 100%!important;;
+    color: #FFF;
+    background: rgba(0, 0, 0,.1)!important;;
+}
+
+.nav-item>a:link {
+    color: white!important;
+}
+
+.nav-item .nav-more {
+    position: absolute;
+    right: -4px;
+}
+
+.user-home-box button {
+    background-color: #33d41d;
+    height: 36px;
+    color: #fff;
+}
+
+.content-user {
+    width: 944px;
+    height: auto;
+}
+
+.content-user h4 {
+    font-weight: 700;
+}
+.content-user .addrole {
+    float: left;
+    width: 320px;
+    border: 1px solid #0000ffab;
+    height: 500px;
+}
+
+.content-user .show-user {
+    float: left;
+    width: 300px;
+    min-height: 500px;
+    margin-left: 25px;
+}
+
+.content-user .show-user button {
+    float: left;
+}
+
+.content-user #role-user-tree-box {
+    float: left;
+    width: 300px;
+    height: auto;
+    max-height: 600px
+    overflow: auto;
+    margin-top: 10px;
+    border: 1px solid #ff00af;
+}
+
+#check-user-tree-box {
+    max-height: 600px;
+    overflow: auto;
+}

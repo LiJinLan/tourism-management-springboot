@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
+body,html {
+	height: 100%;
+	background: #fff
+}
+
+body,ul {
+	margin:0;
+	padding:0
+}
+
+body { 
+	font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;
+	-webkit-text-size-adjust:100%;
+} 
+
+li {
+	list-style:none
+} 
+
+a {
+	text-decoration:none;
+}
+
+/* 以上实际使用若已初始化可删除 */
+
+/* nav */
+.nav {
+	width: 15%;
+	height: 100%;
+	float: left;
+	transition: all .3s;
+}
+
+.nav a {
+	display: block;
+	overflow: hidden;
+	padding-left: 20px;
+	line-height: 45px;
+	max-height: 45px;
+	color: #ffffff;
+	transition: all .3s;
+}
+
+.nav a span {
+	margin-left: 35px;
+	font-size: 14px;
+}
+
+.nav-item {
+	position: relative;
+}
+
+.nav-item.nav-show { 
+	border-bottom: none;
+}
+
+.user-side-menu .nav-show>ul {
+	display: block;
+}
+
+.nav-item ul {
+	display: none;
+}
+
+.nav-item.nav-show ul li {
+	display: block;
+	background-color: #4691cd;
+}
+
+.nav-item>a:before {
+	content: "";
+	position: absolute;
+	left: 0px;
+	width: 2px;
+	height: 46px;
+	background-color: blue;
+	opacity:0;
+	transition: all .3s;
+}
+
+.nav .nav-icon {
+	font-size: 20px;
+	position: absolute;
+	margin-left:-1px;
+}
+
+/* 此处修改导航图标 可自定义iconfont 替换*/
+.icon_1::after {
+	content: "\e62b";
+}
+
+.icon_2::after {
+	content: "\e669";
+}
+
+.icon_3::after {
+	content: "\e61d";
+}
+
+/*---------------------*/
+.nav-more {
+	float:right;
+	margin-right: 20px;
+	font-size: 12px;
+	transition: transform .3s;
+}
+
+/* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
+.nav-more::after {
+	content: "\e621";
+}
+
+/*---------------------*/
+.nav-show .nav-more {
+	transform:rotate(90deg);
+}
+
+.nav-show,.nav-item>a:hover {
+	color: #fff;
+    background: #4691cd;
+}
+
+.user-side-menu ul>li.nav-show>a{
+	background-color: #4691cd!important;
+}
+
+.nav-show>a:before,.nav-item>a:hover:before {
+	opacity:1;
+}
+
+.nav-item li:hover a {
+	color: #FFF;
+	background: rgba(0, 0, 0,.1);
+}
+
+.user-side-menu .nav-show .nav-selected {
+	background-color: #9caac7!important;
+}
+
+.user-side-menu li {
+	color: #fff;
+	background:#009fde
+}
+
+.user-side-menu img {
+	margin-left: -23px;
+    margin-right: 8px;
+}
+
+.user-side-menu a {
+	color: #fff;
+}

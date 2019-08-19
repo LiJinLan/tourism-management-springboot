@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录系统</title>
+		<script type="text/javascript" src="../../resources/lib/jquery/jquery-3.3.1.js"></script>
+		<script type="text/javascript" src="../../resources/js/tool.js"></script>
+		<script type="text/javascript" src="../../resources/js/util.js"></script>
+		<script type="text/javascript" src="./js/login.js"></script>
+		<script type="text/javascript" src="./js/idcode.js"></script>
+		<link rel="stylesheet" type="text/css" href="../../resources/lib/pnotify/pnotify.custom.min.css">
+		<script type="text/javascript" src="../../resources/lib/pnotify/pnotify.custom.min.js"></script>
+		<script type="text/javascript" src="../../resources/lib/pnotify/pnotifyFunc.js"></script>
+		<link rel="stylesheet" type="text/css" href="./css/login.css" />
+		<link rel="stylesheet" type="text/css" href="./css/idcode.css" />
+	</head>
+	<body>
+		<div class="frontier">
+			<div class="content">
+				<div class="login-title"></div>
+				<p class="username">用户名：<input type="text" name="name" placeholder="姓名/学号" id="username" /></p>
+				<p>密&nbsp;&nbsp;&nbsp;码：<input type="password" name="password" id="password"/></p>
+				<p>验证码：<input type="text" name="verify" class="verify" id="Txtidcode"><span id="idcode"></span>
+				</p><br> 
+				<div class="handles">
+					<div class="login"><button onclick="login()">登  录</button></div>
+					<div class="register"><button onclick="register()">注  册</button></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

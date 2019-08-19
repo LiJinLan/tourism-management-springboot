@@ -1,0 +1,253 @@
+.hoteladd {
+    float: left;
+    background-color: #ed00ff1a;
+    width: 100%;
+    height: 89%;
+}
+
+.hotel {
+    float: left;
+    width: 862px;
+    height: auto;
+    border: 1px solid blue;
+}
+
+.hotel-item {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.hotel-left {
+    float: left;
+    width: 70%;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.hotel-item-left {
+    float: left;
+    width: 50%;
+}
+
+.hotel-item-right {
+    float: left;
+    width: 50%;
+}
+
+.hotel-item-right .grade{
+    width: 172px;
+}
+
+.hotel-item .textarea-title {
+    position: relative;
+    top: -25px;
+}
+
+
+.hotel-right {
+    float: left;
+    width: 27%;
+    height: 200px;
+    margin-top: 10px;
+}
+
+.hotel-right input {
+    margin-top: 21px;
+    margin-left: 10px;
+}
+
+.hotel-right .file {
+    float: left;
+    width: 100%;
+    height: 47px;
+}
+
+.hotel .hotel-right button {
+    width: 84px;
+    font-size: 16px;
+    height: 37px;
+    margin-top: 28px;
+    margin-left: 52px;
+}
+
+
+.hoteladd h3 {
+    margin-left: 20px;
+}
+
+.hotel-menu {
+    float: left;
+    width: 100%;
+    height: 24px;
+}
+
+.hotel-menu p {
+    float: left;
+    width: 89px;
+    height: 22px;
+    margin-top: 22px;
+    padding-left: 16px;
+}
+
+.hotel-left input {
+    width: 171px;
+    height: 19px;
+    border: 1px solid rgb(169, 169, 169);
+}
+
+.personal-data .hotel-left .select {
+    width: 30px;
+    height: 15px;
+}
+
+.introduce {
+    float: left;
+    width: 100%;
+    height: 130px;
+}
+
+.introduce p {
+    margin-bottom: 0px;
+    float: left; 
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.introduce textarea {
+    float: left;
+    margin-top: -15px;
+    margin-left: 104px;
+}
+
+.hotel-menu .select {
+    width: 50px;
+    height: 20px;
+}
+
+.hotel-menu label {
+    float: left;
+    margin-top: 21px;
+}
+
+
+.hotel-right .title-img {
+    width: 250px;
+    height: 225px;
+}
+
+.hoteladd button {
+    width: 127px;
+    font-size: 17px;
+    background-color: #c2e91eeb;
+    height: 45px;
+    margin-top: 52px;
+    margin-left: 78px;
+}
+
+.hotel-img-content {
+    float: left;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.hotel-images-control {
+    margin-left: 10px;
+}
+
+.hotel-images-control button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.hotel-images-ul {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+.hotel-images-ul li {
+    float: left;
+    margin-top: 30px;
+    list-style: none;
+}
+
+.hotel-images-ul li .textarea-title {
+    float: left;
+    height: 23px;
+    width: 73px;
+    margin-bottom: 11px;
+    margin-top: -18px;
+}
+
+.hotel-images-ul textarea {
+    margin-left: -74px;
+    margin-top: 5px;
+}
+
+.hotel-images-ul p {
+    margin-top: 0px;
+    float: left;
+    width: 79px;
+}
+
+.hotel-images-ul .img-left {
+    float: left;
+    width: 625px;
+    height: 185px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+
+.hotel-images-ul .img-right {
+    float: left;
+    width: 210px;
+    height: 173px;
+    margin-top: 5px;
+}
+
+.hotel-images-ul .img-right p {
+    margin-left: 6px;
+}
+
+.hotel-submit-control {
+    float: left;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.hotel-submit-control button {
+    float: left;
+    width: 100px;
+    line-height: 30px;
+    margin: 20px 0 0 43%;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.hotel-submit-control button:hover {
+    cursor: pointer;
+}
+
+.hotel-images-ul .preview-img {
+    width: 210px;
+    height: 173px;
+}
+
+.hotel-img-content .textarea-note {
+    position: relative;
+    top: -131px;
+}
+
+.hotel-img-item {
+    margin-left: 10px;
+    margin-bottom: 23px;
+    margin-top: -6px;
+}
+
+.personal-data textarea {
+    text-indent: 2em;
+}
+

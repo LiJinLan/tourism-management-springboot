@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.ScenicDao">
+	<insert id="addScenic" parameterType="Map" >
+		insert into scenic (id, name, province, city, address, tradeVolume, satisfaction, recommend, introduce, grade, ticketWay, payWay, originalPrice, salePrice, childPrice, childSale, orderNotice, telephone, scenicImage)
+		values (#{id}, #{name}, #{province}, #{city}, #{address}, #{tradeVolume}, #{satisfaction}, #{recommend}, #{introduce}, #{grade}, #{ticketWay}, #{payWay}, #{originalPrice}, #{salePrice}, #{childPrice}, #{childSale}, #{orderNotice}, #{telephone}, #{scenicImage})
+	</insert>
+	
+	<insert id="addScenicFile" parameterType="Map" >
+		insert into scenic_file (id, scenicId, fileId) VALUES (#{id},#{scenicId},#{fileId});
+	</insert>
+	
+	<select id="queryScenicByName" parameterType="String" resultType="Map">
+		select id, name, province, city, address, tradeVolume, satisfaction, recommend, introduce, grade, ticketWay, payWay, originalPrice, salePrice, childPrice, childSale, orderNotice, telephone, scenicImage
+		from scenic
+		where name =#{name}
+	</select>
+	<select id="queryScenicByNameCity" parameterType="Map" resultType="Map">
+		select id, name, province, city, address, tradeVolume, satisfaction, recommend, introduce, grade, ticketWay, payWay, originalPrice, salePrice, childPrice, childSale, orderNotice, telephone, scenicImage
+		from scenic
+		where name =#{name} and city =#{city}
+	</select>
+	<select id="queryScenicById" parameterType="String" resultType="Map">
+		select id, name, province, city, address, tradeVolume, satisfaction, recommend, introduce, grade, ticketWay, payWay, originalPrice, salePrice, childPrice, childSale, orderNotice, telephone, scenicImage
+		from scenic
+		where id =#{id}
+	</select>
+	<select id="queryScenicAll" resultType="Map">
+		select id, name, province, city, address, tradeVolume, satisfaction, recommend, introduce, grade, ticketWay, payWay, originalPrice, salePrice, childPrice, childSale, orderNotice, telephone, scenicImage
+		from scenic order by id desc
+	</select>
+	<delete id="deleteScenicById" parameterType="String">
+		delete from scenic where id =#{id}
+	</delete>
+	<update id="updateScenic" parameterType="Map">
+		update scenic set name = #{name},grade = #{grade},province = #{province},city = #{city},tradeVolume = #{tradeVolume},telephone = #{telephone},address = #{address},recommend = #{recommend},introduce = #{introduce},scenicImage = #{scenicImage},satisfaction = #{satisfaction}, ticketWay = #{ticketWay}, payWay = #{payWay}, originalPrice = #{originalPrice}, salePrice = #{salePrice}, childPrice = #{childPrice}, childSale = #{childSale}, orderNotice = #{orderNotice} where id = #{id}
+	</update>
+	<update id="updateFile" parameterType="Map">
+		update file set name = #{name}, filePath = #{filePath}, fileDesc = #{fileDesc} where id = #{id}
+	</update>
+	<select id="queryFileByScenicId" parameterType="String" resultType="Map">
+		select B.id, B.name, B.filePath, B.fileDesc,A.scenicId
+		from scenic_file A inner join file B
+		on A.scenicId=#{scenicId} and A.fileId=B.id 
+	</select>
+	
+	<select id="queryScenicFileByFileId" parameterType="String" resultType="Map">
+		select A.id, A.scenicId, A.fileId
+		from scenic_file A
+		where A.fileId=#{fileId}
+	</select>
+	
+	<update id="updateScenicFileById" parameterType="Map">
+		update scenic_file set scenicId= #{scenicId}, fileId = #{fileId} where id = #{id}
+	</update>
+</mapper>

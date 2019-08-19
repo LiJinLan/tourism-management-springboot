@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper  
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tourism.management.mapper.FileDao">
+	
+	<insert id="addFile" parameterType="Map">
+		insert into file(id,name,filePath,fileDesc)
+		values(#{id},#{name},#{filePath},#{fileDesc})
+	</insert>
+		
+</mapper>

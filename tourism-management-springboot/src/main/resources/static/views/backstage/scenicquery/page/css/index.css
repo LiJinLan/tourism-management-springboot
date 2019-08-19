@@ -1,0 +1,8 @@
+.user-home-order table .operation a {
+	color: #0082dd;
+	margin-right: 7px;
+}
+
+.user-home-order table .operation a:hover {
+	color: green;
+}

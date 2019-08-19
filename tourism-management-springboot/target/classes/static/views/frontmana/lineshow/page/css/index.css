@@ -1,0 +1,17 @@
+.referenceRecom{
+	width:915px;
+	height:348px;
+	float:left;
+}
+.st-cp-list{
+	float:left;
+	margin-left:-20px;
+}
+.st-cp-list li{
+	float:left;
+}
+.satisfaction{
+	font-size: 20px;
+    float: right;
+    color: #fb9125;
+}
