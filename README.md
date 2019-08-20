@@ -1,6 +1,6 @@
 # 旅游信息管理系统运行结果展示
 
-### 只展示部分功能的运行结果，详细运行结果截图可以查看resultPhotos文件夹
+### 这里只展示部分功能的运行结果，更多运行结果截图可以查看resultPhotos文件夹。
 
 登录
 ![登录](https://github.com/LiJinLan/tourism-management-springboot/blob/master/resultPhotos/1_%E7%99%BB%E5%BD%95%E7%95%8C%E9%9D%A2%E5%B1%95%E7%A4%BA.png?raw=true "登录")
